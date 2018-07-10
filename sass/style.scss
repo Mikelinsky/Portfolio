@@ -1,5 +1,69 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900');
 * {
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+}
+
+$colorOfNav: rgb(32, 51, 114);
+$boxShadow: 0px 0px 10px 0px rgb(32, 51, 114);
+
+header {
+    background-image: url('../images/header_devstudio.jpg');
+    height: 80vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        position: fixed;
+        top: 4.5rem;
+        width: 100vw;
+        .nav-elem {
+            height: 5rem;
+            background-color: $colorOfNav;
+            width: 10vw;
+            box-shadow: $boxShadow;
+        }
+        .logo-container {
+            width: 400px;
+            img {
+                position: absolute;
+            }
+        }
+        nav {
+            height: 5rem;
+            font-family: "Moontserrat", sans-serif;
+            font-weight: 800;
+            letter-spacing: 1px;
+            width: 80vw;
+            color: #fff;
+            background-color: $colorOfNav;
+            box-shadow: $boxShadow;
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none;
+                height: auto;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0;
+                li {
+                    margin-right: 60px;
+                    line-height: 5rem;
+                    a {
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
