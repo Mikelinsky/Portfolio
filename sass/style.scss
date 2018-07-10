@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Avenir Book";
+    src: url("../fonts/Avenir/AvenirLTStd-Book.otf") format("opentype");
+}
+@font-face {
+    font-family: "Avenir Medium";
+    src: url("../fonts/Avenir/AvenirLTStd-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "Avenir Roman";
+    src: url("../fonts/Avenir/AvenirLTStd-Roman.otf") format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+}
+p {
+    font-size: 15px;
+    font-weight: bolder;
+}
+.medium {
+    font-family: "Avenir Medium", sans-serif;
+}
+.book {
+    font-family: "Avenir Book", sans-serif;
+}
+.roman {
+    font-family: "Avenir Roman", sans-serif;
+}
