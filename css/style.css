@@ -3,10 +3,20 @@
   box-sizing: border-box; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  position: relative; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.row {
+  display: flex;
+  justify-content: space-around; }
 
 header {
-  background-image: url("../images/header_devstudio.jpg");
+  background-image: url("../images/header_devstudio_med.jpeg");
   height: 80vh;
   background-attachment: fixed;
   background-size: cover;
@@ -17,22 +27,31 @@ header {
     justify-content: space-between;
     height: auto;
     position: fixed;
-    top: 4.5rem;
-    width: 100vw; }
+    width: 100vw;
+    align-items: center;
+    z-index: 1; }
     header .navbar-container .nav-elem {
-      height: 5rem;
+      height: 3.5rem;
       background-color: #203372;
       width: 10vw;
       box-shadow: 0px 0px 10px 0px #203372; }
     header .navbar-container .logo-container {
-      width: 400px; }
+      width: auto;
+      position: relative; }
+      header .navbar-container .logo-container a {
+        display: block;
+        width: 100%;
+        height: 3.5rem;
+        position: absolute;
+        top: calc(50% - 1.75rem); }
       header .navbar-container .logo-container img {
-        position: absolute; }
+        width: 100%;
+        height: auto; }
     header .navbar-container nav {
-      height: 5rem;
+      height: 3.5rem;
       font-family: "Moontserrat", sans-serif;
-      font-weight: 800;
-      letter-spacing: 1px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
       width: 80vw;
       color: #fff;
       background-color: #203372;
@@ -48,10 +67,64 @@ header {
         padding: 0; }
         header .navbar-container nav ul li {
           margin-right: 60px;
-          line-height: 5rem; }
+          line-height: 3.5rem; }
           header .navbar-container nav ul li a {
             text-decoration: none;
             color: white;
-            font-size: 1.2rem; }
+            font-size: 1rem; }
+
+.sect-about-me {
+  position: relative;
+  padding: 7rem 0 10rem 0; }
+  .sect-about-me h3 {
+    border-bottom: 3px solid #203372;
+    line-height: 3.5rem;
+    display: inline-block; }
+  .sect-about-me .title-about-me {
+    background-color: #203372;
+    display: inline-block;
+    padding: 3.5rem 20px;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: -6rem; }
+
+.sect-Technologies {
+  position: relative;
+  padding: 7rem 0 10rem 0;
+  background-color: #e4e4e4; }
+  .sect-Technologies h3 {
+    border-bottom: 3px solid #203372;
+    line-height: 3.5rem;
+    display: inline-block; }
+  .sect-Technologies .title-technologies {
+    background-color: #203372;
+    display: inline-block;
+    padding: 3.5rem 20px;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: -6rem; }
+  .sect-Technologies [class*="ech-"] {
+    width: 9rem; }
+  .sect-Technologies .line {
+    background-color: #203372;
+    height: 0.9rem;
+    margin: 1.3rem 0 3rem 0;
+    display: flex;
+    align-items: flex-end; }
+    .sect-Technologies .line .square-arrow {
+      height: 1.7rem;
+      width: 1.7rem;
+      background-color: #203372;
+      transform: matrix(0.99, 0.42, -0.99, 0.42, 0, 0);
+      box-shadow: 0px 0px 10px 0px #203372; }
+    .sect-Technologies .line::before {
+      content: "";
+      background-color: #203372;
+      height: 0.9rem;
+      width: 100%;
+      position: absolute;
+      box-shadow: 0px 0px 10px 0px #203372; }
 
 /*# sourceMappingURL=style.css.map */

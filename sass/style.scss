@@ -5,13 +5,36 @@
 
 body {
     margin: 0;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
 }
 
-$colorOfNav: rgb(32, 51, 114);
-$boxShadow: 0px 0px 10px 0px rgb(32, 51, 114);
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+//sass navbar variables
+$colorOfNav: rgba(32,
+51,
+114,
+1);
+$navBoxShadow: 0px 0px 10px 0px rgb(32,
+51,
+114);
+$navSize: 3.5rem;
+$navFontSize: 1rem;
+$navFontWeight: 700;
+//sass technologies 
+$techHeightLine: 0.9rem;
 
 header {
-    background-image: url('../images/header_devstudio.jpg');
+    background-image: url('../images/header_devstudio_med.jpeg');
     height: 80vh;
     background-attachment: fixed;
     background-size: cover;
@@ -22,29 +45,39 @@ header {
         justify-content: space-between;
         height: auto;
         position: fixed;
-        top: 4.5rem;
         width: 100vw;
+        align-items: center;
+        z-index: 1;
         .nav-elem {
-            height: 5rem;
+            height: $navSize;
             background-color: $colorOfNav;
             width: 10vw;
-            box-shadow: $boxShadow;
+            box-shadow: $navBoxShadow;
         }
         .logo-container {
-            width: 400px;
-            img {
+            width: auto;
+            position: relative;
+            a {
+                display: block;
+                width: 100%;
+                height: $navSize;
                 position: absolute;
+                top: calc(50% - 1.75rem);
+            }
+            img {
+                width: 100%;
+                height: auto;
             }
         }
         nav {
-            height: 5rem;
+            height: $navSize;
             font-family: "Moontserrat", sans-serif;
-            font-weight: 800;
-            letter-spacing: 1px;
+            font-weight: $navFontWeight;
+            letter-spacing: 2.5px;
             width: 80vw;
             color: #fff;
             background-color: $colorOfNav;
-            box-shadow: $boxShadow;
+            box-shadow: $navBoxShadow;
             ul {
                 display: flex;
                 justify-content: center;
@@ -56,14 +89,78 @@ header {
                 padding: 0;
                 li {
                     margin-right: 60px;
-                    line-height: 5rem;
+                    line-height: $navSize;
                     a {
                         text-decoration: none;
                         color: rgb(255, 255, 255);
-                        font-size: 1.2rem;
+                        font-size: $navFontSize;
                     }
                 }
             }
+        }
+    }
+}
+
+.sect-about-me {
+    position: relative;
+    padding: 7rem 0 10rem 0;
+    h3 {
+        border-bottom: 3px solid $colorOfNav;
+        line-height: 3.5rem;
+        display: inline-block;
+    }
+    .title-about-me {
+        background-color: $colorOfNav;
+        display: inline-block;
+        padding: 3.5rem 20px;
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        position: absolute;
+        top: -6rem;
+    }
+}
+
+.sect-Technologies {
+    position: relative;
+    padding: 7rem 0 10rem 0;
+    background-color: rgb(228, 228, 228);
+    h3 {
+        border-bottom: 3px solid $colorOfNav;
+        line-height: 3.5rem;
+        display: inline-block;
+    }
+    .title-technologies {
+        background-color: $colorOfNav;
+        display: inline-block;
+        padding: 3.5rem 20px;
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        position: absolute;
+        top: -6rem;
+    }
+    [class*="ech-"] {
+        width: 9rem;
+    }
+    .line {
+        background-color: $colorOfNav;
+        height: $techHeightLine;
+        margin: 1.3rem 0 3rem 0;
+        display: flex;
+        align-items: flex-end;
+        .square-arrow {
+            height: 1.7rem;
+            width: 1.7rem;
+            background-color: $colorOfNav;
+            transform: matrix(0.99, 0.42, -0.99, 0.42, 0, 0);
+            box-shadow: $navBoxShadow;
+        }
+        &::before {
+            content: "";
+            background-color: $colorOfNav;
+            height: $techHeightLine;
+            width: 100%;
+            position: absolute;
+            box-shadow: $navBoxShadow; 
         }
     }
 }
