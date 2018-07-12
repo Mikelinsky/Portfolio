@@ -75,15 +75,16 @@ header {
 
 .sect-about-me {
   position: relative;
-  padding: 7rem 0 10rem 0; }
+  padding: 4rem 0 8rem 0; }
   .sect-about-me h3 {
     border-bottom: 3px solid #203372;
     line-height: 3.5rem;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
   .sect-about-me .title-about-me {
     background-color: #203372;
     display: inline-block;
-    padding: 3.5rem 20px;
+    padding: 3rem 30px;
     color: white;
     font-size: 2rem;
     position: absolute;
@@ -91,12 +92,13 @@ header {
 
 .sect-Technologies {
   position: relative;
-  padding: 7rem 0 10rem 0;
-  background-color: #e4e4e4; }
+  padding: 4rem 0 8rem 0;
+  background-color: #ececec; }
   .sect-Technologies h3 {
     border-bottom: 3px solid #203372;
     line-height: 3.5rem;
     display: inline-block;
+    margin: 0;
     margin-bottom: 3rem; }
   .sect-Technologies .technologies-background-area {
     background-image: url("../images/techsection_code.jpg");
@@ -109,12 +111,12 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(202, 202, 202, 0.4);
+    background-color: rgba(32, 51, 114, 0.692);
     z-index: -1; }
   .sect-Technologies .title-technologies {
     background-color: #203372;
     display: inline-block;
-    padding: 3.5rem 20px;
+    padding: 3rem 30px;
     color: white;
     font-size: 2rem;
     position: absolute;
@@ -122,7 +124,7 @@ header {
   .sect-Technologies [class*="ech-"] {
     width: 9rem; }
   .sect-Technologies .line {
-    background-color: #203372;
+    background-color: white;
     height: 0.9rem;
     margin: 1.3rem 0 3rem 0;
     display: flex;
@@ -130,15 +132,15 @@ header {
     .sect-Technologies .line .square-arrow {
       height: 1.7rem;
       width: 1.7rem;
-      background-color: #203372;
+      background-color: white;
       transform: matrix(0.99, 0.42, -0.99, 0.42, 0, 0.8);
-      box-shadow: 0px 0px 10px 0px #203372; }
+      box-shadow: 0px 0px 10px 0px white; }
     .sect-Technologies .line::before {
       content: "";
-      background-color: #203372;
+      background-color: white;
       height: 0.9rem;
       width: 100%;
       position: absolute;
-      box-shadow: 0px 0px 10px 0px #203372; }
+      box-shadow: 0px 0px 10px 0px white; }
 
 /*# sourceMappingURL=style.css.map */

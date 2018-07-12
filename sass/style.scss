@@ -19,7 +19,8 @@ body {
     justify-content: space-around;
 }
 
-//sass navbar variables
+//          SASS
+//navbar
 $colorOfNav: rgba(32,
 51,
 114,
@@ -30,8 +31,34 @@ $navBoxShadow: 0px 0px 10px 0px rgb(32,
 $navSize: 3.5rem;
 $navFontSize: 1rem;
 $navFontWeight: 700;
-//sass technologies 
+// technologies 
 $techHeightLine: 0.9rem;
+$techLineColor: rgb(255,
+255,
+255);
+$techBoxShadow: 0px 0px 10px 0px $techLineColor;
+// mixins
+@mixin titleOfSection() {
+    background-color: $colorOfNav;
+    display: inline-block;
+    padding: 3rem 30px;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    position: absolute;
+    top: -6rem;
+}
+
+@mixin headerOfSection() {
+    border-bottom: 3px solid $colorOfNav;
+    line-height: 3.5rem;
+    display: inline-block;
+    margin: 0;
+}
+
+@mixin sections() {
+    position: relative;
+    padding: 4rem 0 8rem 0;
+}
 
 header {
     background-image: url('../images/header_devstudio_med.jpeg');
@@ -102,32 +129,20 @@ header {
 }
 
 .sect-about-me {
-    position: relative;
-    padding: 7rem 0 10rem 0;
+    @include sections();
     h3 {
-        border-bottom: 3px solid $colorOfNav;
-        line-height: 3.5rem;
-        display: inline-block;
+        @include headerOfSection();
     }
     .title-about-me {
-        background-color: $colorOfNav;
-        display: inline-block;
-        padding: 3.5rem 20px;
-        color: rgb(255, 255, 255);
-        font-size: 2rem;
-        position: absolute;
-        top: -6rem;
+        @include titleOfSection();
     }
 }
 
 .sect-Technologies {
-    position: relative;
-    padding: 7rem 0 10rem 0;
-    background-color: rgb(228, 228, 228);
+    @include sections();
+    background-color: rgb(236, 236, 236);
     h3 {
-        border-bottom: 3px solid $colorOfNav;
-        line-height: 3.5rem;
-        display: inline-block;
+        @include headerOfSection();
         margin-bottom: 3rem;
     }
     .technologies-background-area {
@@ -142,23 +157,17 @@ header {
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: rgba(202, 202, 202, 0.4);
+        background-color: rgba(32, 51, 114, 0.692);
         z-index: -1;
     }
     .title-technologies {
-        background-color: $colorOfNav;
-        display: inline-block;
-        padding: 3.5rem 20px;
-        color: rgb(255, 255, 255);
-        font-size: 2rem;
-        position: absolute;
-        top: -6rem;
+        @include titleOfSection();
     }
     [class*="ech-"] {
         width: 9rem;
     }
     .line {
-        background-color: $colorOfNav;
+        background-color: $techLineColor;
         height: $techHeightLine;
         margin: 1.3rem 0 3rem 0;
         display: flex;
@@ -166,17 +175,17 @@ header {
         .square-arrow {
             height: 1.7rem;
             width: 1.7rem;
-            background-color: $colorOfNav;
+            background-color: $techLineColor;
             transform: matrix(0.99, 0.42, -0.99, 0.42, 0, 0.8);
-            box-shadow: $navBoxShadow;
+            box-shadow: $techBoxShadow;
         }
         &::before {
             content: "";
-            background-color: $colorOfNav;
+            background-color: $techLineColor;
             height: $techHeightLine;
             width: 100%;
             position: absolute;
-            box-shadow: $navBoxShadow; 
+            box-shadow: $techBoxShadow;
         }
     }
 }
