@@ -11,7 +11,9 @@ body {
 
 .container {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 2.5rem;
 }
 
 .row {
@@ -41,11 +43,11 @@ $techBoxShadow: 0px 0px 10px 0px $techLineColor;
 @mixin titleOfSection() {
     background-color: $colorOfNav;
     display: inline-block;
-    padding: 3rem 30px;
+    padding: 2rem 30px;
     color: rgb(255, 255, 255);
     font-size: 2rem;
     position: absolute;
-    top: -6rem;
+    top: -4.5rem;
 }
 
 @mixin headerOfSection() {
@@ -164,7 +166,7 @@ header {
         @include titleOfSection();
     }
     [class*="ech-"] {
-        width: 9rem;
+        width: 7.5rem;
     }
     .line {
         background-color: $techLineColor;
@@ -186,6 +188,84 @@ header {
             width: 100%;
             position: absolute;
             box-shadow: $techBoxShadow;
+        }
+    }
+}
+
+.sect-projects {
+    @include sections();
+    .title-projects {
+        @include titleOfSection();
+    }
+    h3 {
+        @include headerOfSection();
+        margin-bottom: 3rem;
+    }
+    h5 {
+        margin: 0 0 0.5rem 0;
+    }
+    .project-container {
+        max-width: 88%;
+        margin: 0 auto 0 0;
+        display: flex;
+        .left-side {
+            display: flex;
+            background-color: rgb(151, 157, 177);
+            padding: 5rem 0 5rem 6rem;
+            color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 10px 0px rgb(151, 157, 177);
+            .list-left-side {
+                display: flex;
+                flex-direction: column;
+
+                .cell {
+                    margin-bottom: 2rem;
+                    padding: 2rem;
+                    position: relative;
+                    transition-duration: .5s;
+                    &:hover {
+                        background-color: rgb(3, 14, 55);
+                        box-shadow: 0px 0px 10px 0px rgb(3, 14, 55);
+                    }
+                    &:hover .arrow {
+                        background-color: rgb(3, 14, 55);
+                        box-shadow: 0px 0px 10px 0px rgb(3, 14, 55);
+                    }
+                    .arrow {
+                        position: absolute;
+                        background-color: rgb(151, 157, 177);
+                        transition-duration: .5s;
+                        height: 2rem;
+                        width: 2rem;
+                        top: calc(50% - 1rem);
+                        right: 0;
+                        transform: matrix(0.71, 0.71, -0.71, 0.71, 16, 0);
+                    }
+                    h3 {
+                        margin: 0;
+                        border: 0;
+                    }
+                    i {
+                        font-size: 1.5rem;
+                        margin-right: 10px;
+                    }
+                    .tech-used {  
+                        display: flex;
+                        .cell-icon {
+                            width: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .right-side {
+            width: 100%;
+            .photo-cell {
+                .project-1 {
+                    background-image: url("../images/design_lab.jpg");
+                    width: 100%;
+                }
+            }
         }
     }
 }

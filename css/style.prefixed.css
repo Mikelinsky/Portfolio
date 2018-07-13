@@ -9,7 +9,9 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2.5rem; }
 
 .row {
   display: -ms-flexbox;
@@ -92,11 +94,11 @@ header {
   .sect-about-me .title-about-me {
     background-color: #203372;
     display: inline-block;
-    padding: 3rem 30px;
+    padding: 2rem 30px;
     color: white;
     font-size: 2rem;
     position: absolute;
-    top: -6rem; }
+    top: -4.5rem; }
 
 .sect-Technologies {
   position: relative;
@@ -124,13 +126,13 @@ header {
   .sect-Technologies .title-technologies {
     background-color: #203372;
     display: inline-block;
-    padding: 3rem 30px;
+    padding: 2rem 30px;
     color: white;
     font-size: 2rem;
     position: absolute;
-    top: -6rem; }
+    top: -4.5rem; }
   .sect-Technologies [class*="ech-"] {
-    width: 9rem; }
+    width: 7.5rem; }
   .sect-Technologies .line {
     background-color: white;
     height: 0.9rem;
@@ -152,5 +154,78 @@ header {
       width: 100%;
       position: absolute;
       box-shadow: 0px 0px 10px 0px white; }
+
+.sect-projects {
+  position: relative;
+  padding: 4rem 0 8rem 0; }
+  .sect-projects .title-projects {
+    background-color: #203372;
+    display: inline-block;
+    padding: 2rem 30px;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: -4.5rem; }
+  .sect-projects h3 {
+    border-bottom: 3px solid #203372;
+    line-height: 3.5rem;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 3rem; }
+  .sect-projects h5 {
+    margin: 0 0 0.5rem 0; }
+  .sect-projects .project-container {
+    max-width: 88%;
+    margin: 0 auto 0 0;
+    display: -ms-flexbox;
+    display: flex; }
+    .sect-projects .project-container .left-side {
+      display: -ms-flexbox;
+      display: flex;
+      background-color: #979db1;
+      padding: 5rem 0 5rem 6rem;
+      color: white;
+      box-shadow: 0px 0px 10px 0px #979db1; }
+      .sect-projects .project-container .left-side .list-left-side {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+        .sect-projects .project-container .left-side .list-left-side .cell {
+          margin-bottom: 2rem;
+          padding: 2rem;
+          position: relative;
+          transition-duration: .5s; }
+          .sect-projects .project-container .left-side .list-left-side .cell:hover {
+            background-color: #030e37;
+            box-shadow: 0px 0px 10px 0px #030e37; }
+          .sect-projects .project-container .left-side .list-left-side .cell:hover .arrow {
+            background-color: #030e37;
+            box-shadow: 0px 0px 10px 0px #030e37; }
+          .sect-projects .project-container .left-side .list-left-side .cell .arrow {
+            position: absolute;
+            background-color: #979db1;
+            transition-duration: .5s;
+            height: 2rem;
+            width: 2rem;
+            top: calc(50% - 1rem);
+            right: 0;
+            transform: matrix(0.71, 0.71, -0.71, 0.71, 16, 0); }
+          .sect-projects .project-container .left-side .list-left-side .cell h3 {
+            margin: 0;
+            border: 0; }
+          .sect-projects .project-container .left-side .list-left-side .cell i {
+            font-size: 1.5rem;
+            margin-right: 10px; }
+          .sect-projects .project-container .left-side .list-left-side .cell .tech-used {
+            display: -ms-flexbox;
+            display: flex; }
+            .sect-projects .project-container .left-side .list-left-side .cell .tech-used .cell-icon {
+              width: 2.5rem; }
+    .sect-projects .project-container .right-side {
+      width: 100%; }
+      .sect-projects .project-container .right-side .photo-cell .project-1 {
+        background-image: url("../images/design_lab.jpg");
+        width: 100%; }
 
 /*# sourceMappingURL=style.prefixed.css.map */
