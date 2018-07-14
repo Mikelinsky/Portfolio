@@ -4,16 +4,16 @@
 }
 
 body {
-    margin: 0;
     font-family: "Montserrat", sans-serif;
+    margin: 0;
     position: relative;
 }
 
 .container {
-    max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
+    max-width: 1200px;
     padding: 0 2.5rem;
+    width: 100%;
 }
 
 .row {
@@ -33,96 +33,117 @@ $navBoxShadow: 0px 0px 10px 0px rgb(32,
 $navSize: 3.5rem;
 $navFontSize: 1rem;
 $navFontWeight: 700;
+// button up
+$buttonUpColor: rgba(32, 51, 114, 0.5);
 // technologies 
 $techHeightLine: 0.9rem;
 $techLineColor: rgb(255,
 255,
 255);
 $techBoxShadow: 0px 0px 10px 0px $techLineColor;
+//projects
+$projectsMainColor: rgb(151, 157, 177);
+$projectsHoverColor: rgb(3, 14, 55);
 // mixins
 @mixin titleOfSection() {
     background-color: $colorOfNav;
-    display: inline-block;
-    padding: 2rem 30px;
     color: rgb(255, 255, 255);
+    display: inline-block;
     font-size: 2rem;
+    padding: 2rem 30px;
     position: absolute;
     top: -4.5rem;
 }
 
 @mixin headerOfSection() {
     border-bottom: 3px solid $colorOfNav;
-    line-height: 3.5rem;
     display: inline-block;
+    line-height: 3.5rem;
     margin: 0;
 }
 
 @mixin sections() {
-    position: relative;
     padding: 4rem 0 8rem 0;
+    position: relative;
+}
+
+#btnUp-js {
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    background-color: $buttonUpColor;
+    right: 1rem;
+    bottom: 3rem;
+    border: none;
+    z-index: 4;
+    border-radius: 8%;
+    i {
+        font-size: 4rem;
+        color: $colorOfNav; 
+    }
 }
 
 header {
-    background-image: url('../images/header_devstudio_med.jpeg');
-    height: 80vh;
     background-attachment: fixed;
-    background-size: cover;
+    background-image: url('../images/header_devstudio_med.jpeg');
     background-position: 50% 100%;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
     .navbar-container {
+        align-items: center;
         display: flex;
-        justify-content: space-between;
         height: auto;
+        justify-content: space-between;
         position: fixed;
         width: 100vw;
-        align-items: center;
         z-index: 1;
         .nav-elem {
-            height: $navSize;
             background-color: $colorOfNav;
-            width: 10vw;
             box-shadow: $navBoxShadow;
+            height: $navSize;
+            width: 10vw;
         }
         .logo-container {
-            width: auto;
             position: relative;
+            width: auto;
             a {
                 display: block;
-                width: 100%;
                 height: $navSize;
                 position: absolute;
                 top: calc(50% - 1.75rem);
+                width: 100%;
             }
             img {
-                width: 100%;
                 height: auto;
+                width: 100%;
             }
         }
         nav {
-            height: $navSize;
-            font-family: "Moontserrat", sans-serif;
-            font-weight: $navFontWeight;
-            letter-spacing: 2.5px;
-            width: 80vw;
-            color: #fff;
             background-color: $colorOfNav;
             box-shadow: $navBoxShadow;
+            color: #fff;
+            font-family: "Moontserrat", sans-serif;
+            font-weight: $navFontWeight;
+            height: $navSize;
+            letter-spacing: 2.5px;
+            width: 80vw;
             ul {
-                display: flex;
-                justify-content: center;
                 align-items: center;
-                list-style-type: none;
+                display: flex;
                 height: auto;
-                text-transform: uppercase;
+                justify-content: center;
+                list-style-type: none;
                 margin: 0;
                 padding: 0;
+                text-transform: uppercase;
                 li {
-                    margin-right: 60px;
                     line-height: $navSize;
+                    margin-right: 60px;
                     a {
-                        text-decoration: none;
                         color: rgb(255, 255, 255);
                         font-size: $navFontSize;
+                        text-decoration: none;
                     }
                 }
             }
@@ -132,7 +153,7 @@ header {
 
 .sect-about-me {
     @include sections();
-    h3 {
+    .header-of-about-me {
         @include headerOfSection();
     }
     .title-about-me {
@@ -140,10 +161,10 @@ header {
     }
 }
 
-.sect-Technologies {
+.sect-technologies {
     @include sections();
     background-color: rgb(236, 236, 236);
-    h3 {
+    .header-of-technologies {
         @include headerOfSection();
         margin-bottom: 3rem;
     }
@@ -154,12 +175,12 @@ header {
         z-index: 0;
     }
     .technologies-layer {
-        position: absolute;
-        top: 0;
+        background-color: rgba(32, 51, 114, 0.692);
         bottom: 0;
         left: 0;
+        position: absolute;
         right: 0;
-        background-color: rgba(32, 51, 114, 0.692);
+        top: 0;
         z-index: -1;
     }
     .title-technologies {
@@ -169,25 +190,25 @@ header {
         width: 7.5rem;
     }
     .line {
+        align-items: flex-end;
         background-color: $techLineColor;
+        display: flex;
         height: $techHeightLine;
         margin: 1.3rem 0 3rem 0;
-        display: flex;
-        align-items: flex-end;
         .square-arrow {
-            height: 1.7rem;
-            width: 1.7rem;
             background-color: $techLineColor;
-            transform: matrix(0.99, 0.42, -0.99, 0.42, 0, 0.8);
             box-shadow: $techBoxShadow;
+            height: 1.7rem;
+            transform: matrix(0.99, 0.42, -0.99, 0.42, 0, 0.8);
+            width: 1.7rem;
         }
         &::before {
-            content: "";
             background-color: $techLineColor;
-            height: $techHeightLine;
-            width: 100%;
-            position: absolute;
             box-shadow: $techBoxShadow;
+            content: "";
+            height: $techHeightLine;
+            position: absolute;
+            width: 100%;
         }
     }
 }
@@ -197,96 +218,102 @@ header {
     .title-projects {
         @include titleOfSection();
     }
-    h3 {
+    .header-of-projects {
         @include headerOfSection();
         margin-bottom: 3rem;
     }
-    h5 {
+    .header-used-technologies {
         margin: 0 0 0.5rem 0;
     }
     .project-container {
-        margin: 0 auto 0 0;
         display: flex;
+        margin: 0 auto 0 0;
         .left-side {
-            display: flex;
-            background-color: rgb(151, 157, 177);
-            padding: 5rem 0 5rem 6rem;
+            background-color: $projectsMainColor;
+            box-shadow: 0px 0px 10px 0px $projectsMainColor;
             color: rgb(255, 255, 255);
-            box-shadow: 0px 0px 10px 0px rgb(151, 157, 177);
+            display: flex;
+            padding: 5rem 0 5rem 6rem;
             width: 35%;
             .list-left-side {
                 display: flex;
                 flex-direction: column;
 
                 .cell {
-                    margin-bottom: 2rem;
+                    margin-bottom: 4rem;
                     padding: 2rem;
                     position: relative;
                     transition-duration: .5s;
                     &:hover {
-                        background-color: rgb(3, 14, 55);
-                        box-shadow: 0px 0px 10px 0px rgb(3, 14, 55);
+                        background-color: $projectsHoverColor;
+                        box-shadow: 0px 0px 10px 0px $projectsHoverColor;
                     }
                     &:hover .arrow {
-                        background-color: rgb(3, 14, 55);
-                        box-shadow: 0px 0px 10px 0px rgb(3, 14, 55);
+                        background-color: $projectsHoverColor;
+                        box-shadow: 0px 0px 10px 0px $projectsHoverColor;
                     }
                     &:hover .project-min .photo-cell {
-                        background-color: rgb(3, 14, 55);
-                        box-shadow: 0px 0px 10px 0px rgb(3, 14, 55);
+                        background-color: $projectsHoverColor;
+                        box-shadow: 0px 0px 10px 0px $projectsHoverColor;
                     }
                     .project-min {
                         position: absolute;
-                        top: calc(50% - 9rem);
                         right: -65rem;
+                        top: calc(50% - 9rem);
                         .photo-cell {
+                            background-color: $projectsMainColor;
+                            box-shadow: 0px 0px 10px 0px $projectsMainColor;
                             height: 18rem;
-                            width: 60rem;
-                            background-color: rgb(151, 157, 177);
-                            box-shadow: 0px 0px 10px 0px rgb(151, 157, 177);
                             padding: 1rem;
                             transition-duration: 0.5s;
-                            .project-1 {
+                            width: 60rem;
+                            [class*="rea-"] {
+                                background-position: center;
+                                background-size: cover;
+                                height: 100%;
+                                position: relative;
+                                width: 100%;
+                            }
+                            .area-photo-1 {
                                 background-image: url("../images/design_lab.jpg");
-                                width: 100%;
-                                height: 100%;
-                                background-position: center;
-                                background-size: cover;
                             }
-                            .project-2 {
+                            .area-photo-2 {
                                 background-image: url("../images/picture_perfect.jpg");
-                                width: 100%;
-                                height: 100%;
-                                background-position: center;
-                                background-size: cover;
                             }
-                            .project-3 {
+                            .area-photo-3 {
                                 background-image: url("../images/your_life.jpg");
-                                width: 100%;
-                                height: 100%;
-                                background-position: center;
-                                background-size: cover;
+                            }
+                            .photo-layer {
+                                background-color: rgba(32, 51, 114, 0.692);
+                                bottom: 0;
+                                left: 0;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
                             }
                         }                          
                     }
                     .arrow {
-                        position: absolute;
-                        background-color: rgb(151, 157, 177);
-                        transition-duration: .5s;
+                        background-color: $projectsMainColor;
+                        box-shadow: 0px 0px 10px 0px $projectsMainColor;
                         height: 2rem;
-                        width: 2rem;
-                        top: calc(50% - 1rem);
+                        position: absolute;
                         right: 0;
+                        top: calc(50% - 1rem);
                         transform: matrix(0.71, 0.71, -0.71, 0.71, 16, 0);
-                        box-shadow: 0px 0px 10px 0px rgb(151, 157, 177);
+                        transition-duration: .5s;
+                        width: 2rem;
                     }
-                    h3 {
-                        margin: 0;
+                    .header-of-cell-title {
                         border: 0;
+                        margin: 0;
+                        position: relative;
                     }
                     i {
                         font-size: 1.5rem;
+                        left: -1rem;
                         margin-right: 10px;
+                        position: absolute;
                     }
                     .tech-used {  
                         display: flex;
@@ -298,10 +325,10 @@ header {
             }
         }
         .right-side {
-            width: 100%;
-            background-image: url("../images/dev_office.jpg");
-            background-size: cover;
+            background-image: url("../images/dev_office2.jpg");
             background-position: center right;
+            background-size: cover;
+            width: 100%;
         }
     }
 }

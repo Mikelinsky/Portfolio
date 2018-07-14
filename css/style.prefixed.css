@@ -3,15 +3,15 @@
   box-sizing: border-box; }
 
 body {
-  margin: 0;
   font-family: "Montserrat", sans-serif;
+  margin: 0;
   position: relative; }
 
 .container {
-  max-width: 1200px;
-  width: 100%;
   margin: 0 auto;
-  padding: 0 2.5rem; }
+  max-width: 1200px;
+  padding: 0 2.5rem;
+  width: 100%; }
 
 .row {
   display: -ms-flexbox;
@@ -19,172 +19,186 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
+#btnUp-js {
+  position: fixed;
+  height: 5rem;
+  width: 5rem;
+  background-color: rgba(32, 51, 114, 0.5);
+  right: 1rem;
+  bottom: 3rem;
+  border: none;
+  z-index: 4;
+  border-radius: 8%; }
+  #btnUp-js i {
+    font-size: 4rem;
+    color: #203372; }
+
 header {
-  background-image: url("../images/header_devstudio_med.jpeg");
-  height: 80vh;
   background-attachment: fixed;
-  background-size: cover;
+  background-image: url("../images/header_devstudio_med.jpeg");
   background-position: 50% 100%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh; }
   header .navbar-container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    height: auto;
-    position: fixed;
-    width: 100vw;
     -ms-flex-align: center;
         align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    position: fixed;
+    width: 100vw;
     z-index: 1; }
     header .navbar-container .nav-elem {
-      height: 3.5rem;
       background-color: #203372;
-      width: 10vw;
-      box-shadow: 0px 0px 10px 0px #203372; }
+      box-shadow: 0px 0px 10px 0px #203372;
+      height: 3.5rem;
+      width: 10vw; }
     header .navbar-container .logo-container {
-      width: auto;
-      position: relative; }
+      position: relative;
+      width: auto; }
       header .navbar-container .logo-container a {
         display: block;
-        width: 100%;
         height: 3.5rem;
         position: absolute;
-        top: calc(50% - 1.75rem); }
+        top: calc(50% - 1.75rem);
+        width: 100%; }
       header .navbar-container .logo-container img {
-        width: 100%;
-        height: auto; }
+        height: auto;
+        width: 100%; }
     header .navbar-container nav {
-      height: 3.5rem;
+      background-color: #203372;
+      box-shadow: 0px 0px 10px 0px #203372;
+      color: #fff;
       font-family: "Moontserrat", sans-serif;
       font-weight: 700;
+      height: 3.5rem;
       letter-spacing: 2.5px;
-      width: 80vw;
-      color: #fff;
-      background-color: #203372;
-      box-shadow: 0px 0px 10px 0px #203372; }
+      width: 80vw; }
       header .navbar-container nav ul {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-pack: center;
-            justify-content: center;
         -ms-flex-align: center;
             align-items: center;
-        list-style-type: none;
+        display: -ms-flexbox;
+        display: flex;
         height: auto;
-        text-transform: uppercase;
+        -ms-flex-pack: center;
+            justify-content: center;
+        list-style-type: none;
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        text-transform: uppercase; }
         header .navbar-container nav ul li {
-          margin-right: 60px;
-          line-height: 3.5rem; }
+          line-height: 3.5rem;
+          margin-right: 60px; }
           header .navbar-container nav ul li a {
-            text-decoration: none;
             color: white;
-            font-size: 1rem; }
+            font-size: 1rem;
+            text-decoration: none; }
 
 .sect-about-me {
-  position: relative;
-  padding: 4rem 0 8rem 0; }
-  .sect-about-me h3 {
+  padding: 4rem 0 8rem 0;
+  position: relative; }
+  .sect-about-me .header-of-about-me {
     border-bottom: 3px solid #203372;
-    line-height: 3.5rem;
     display: inline-block;
+    line-height: 3.5rem;
     margin: 0; }
   .sect-about-me .title-about-me {
     background-color: #203372;
-    display: inline-block;
-    padding: 2rem 30px;
     color: white;
+    display: inline-block;
     font-size: 2rem;
+    padding: 2rem 30px;
     position: absolute;
     top: -4.5rem; }
 
-.sect-Technologies {
-  position: relative;
+.sect-technologies {
   padding: 4rem 0 8rem 0;
+  position: relative;
   background-color: #ececec; }
-  .sect-Technologies h3 {
+  .sect-technologies .header-of-technologies {
     border-bottom: 3px solid #203372;
-    line-height: 3.5rem;
     display: inline-block;
+    line-height: 3.5rem;
     margin: 0;
     margin-bottom: 3rem; }
-  .sect-Technologies .technologies-background-area {
+  .sect-technologies .technologies-background-area {
     background-image: url("../images/techsection_code.jpg");
     padding: 6rem;
     position: relative;
     z-index: 0; }
-  .sect-Technologies .technologies-layer {
-    position: absolute;
-    top: 0;
+  .sect-technologies .technologies-layer {
+    background-color: rgba(32, 51, 114, 0.692);
     bottom: 0;
     left: 0;
+    position: absolute;
     right: 0;
-    background-color: rgba(32, 51, 114, 0.692);
+    top: 0;
     z-index: -1; }
-  .sect-Technologies .title-technologies {
+  .sect-technologies .title-technologies {
     background-color: #203372;
-    display: inline-block;
-    padding: 2rem 30px;
     color: white;
+    display: inline-block;
     font-size: 2rem;
+    padding: 2rem 30px;
     position: absolute;
     top: -4.5rem; }
-  .sect-Technologies [class*="ech-"] {
+  .sect-technologies [class*="ech-"] {
     width: 7.5rem; }
-  .sect-Technologies .line {
+  .sect-technologies .line {
+    -ms-flex-align: end;
+        align-items: flex-end;
     background-color: white;
-    height: 0.9rem;
-    margin: 1.3rem 0 3rem 0;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: end;
-        align-items: flex-end; }
-    .sect-Technologies .line .square-arrow {
+    height: 0.9rem;
+    margin: 1.3rem 0 3rem 0; }
+    .sect-technologies .line .square-arrow {
+      background-color: white;
+      box-shadow: 0px 0px 10px 0px white;
       height: 1.7rem;
-      width: 1.7rem;
-      background-color: white;
       transform: matrix(0.99, 0.42, -0.99, 0.42, 0, 0.8);
-      box-shadow: 0px 0px 10px 0px white; }
-    .sect-Technologies .line::before {
-      content: "";
+      width: 1.7rem; }
+    .sect-technologies .line::before {
       background-color: white;
+      box-shadow: 0px 0px 10px 0px white;
+      content: "";
       height: 0.9rem;
-      width: 100%;
       position: absolute;
-      box-shadow: 0px 0px 10px 0px white; }
+      width: 100%; }
 
 .sect-projects {
-  position: relative;
-  padding: 4rem 0 8rem 0; }
+  padding: 4rem 0 8rem 0;
+  position: relative; }
   .sect-projects .title-projects {
     background-color: #203372;
-    display: inline-block;
-    padding: 2rem 30px;
     color: white;
+    display: inline-block;
     font-size: 2rem;
+    padding: 2rem 30px;
     position: absolute;
     top: -4.5rem; }
-  .sect-projects h3 {
+  .sect-projects .header-of-projects {
     border-bottom: 3px solid #203372;
-    line-height: 3.5rem;
     display: inline-block;
+    line-height: 3.5rem;
     margin: 0;
     margin-bottom: 3rem; }
-  .sect-projects h5 {
+  .sect-projects .header-used-technologies {
     margin: 0 0 0.5rem 0; }
   .sect-projects .project-container {
-    margin: 0 auto 0 0;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    margin: 0 auto 0 0; }
     .sect-projects .project-container .left-side {
+      background-color: #979db1;
+      box-shadow: 0px 0px 10px 0px #979db1;
+      color: white;
       display: -ms-flexbox;
       display: flex;
-      background-color: #979db1;
       padding: 5rem 0 5rem 6rem;
-      color: white;
-      box-shadow: 0px 0px 10px 0px #979db1;
       width: 35%; }
       .sect-projects .project-container .left-side .list-left-side {
         display: -ms-flexbox;
@@ -192,7 +206,7 @@ header {
         -ms-flex-direction: column;
             flex-direction: column; }
         .sect-projects .project-container .left-side .list-left-side .cell {
-          margin-bottom: 2rem;
+          margin-bottom: 4rem;
           padding: 2rem;
           position: relative;
           transition-duration: .5s; }
@@ -207,58 +221,62 @@ header {
             box-shadow: 0px 0px 10px 0px #030e37; }
           .sect-projects .project-container .left-side .list-left-side .cell .project-min {
             position: absolute;
-            top: calc(50% - 9rem);
-            right: -65rem; }
+            right: -65rem;
+            top: calc(50% - 9rem); }
             .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell {
-              height: 18rem;
-              width: 60rem;
               background-color: #979db1;
               box-shadow: 0px 0px 10px 0px #979db1;
+              height: 18rem;
               padding: 1rem;
-              transition-duration: 0.5s; }
-              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .project-1 {
-                background-image: url("../images/design_lab.jpg");
-                width: 100%;
-                height: 100%;
+              transition-duration: 0.5s;
+              width: 60rem; }
+              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell [class*="rea-"] {
                 background-position: center;
-                background-size: cover; }
-              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .project-2 {
-                background-image: url("../images/picture_perfect.jpg");
-                width: 100%;
+                background-size: cover;
                 height: 100%;
-                background-position: center;
-                background-size: cover; }
-              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .project-3 {
-                background-image: url("../images/your_life.jpg");
-                width: 100%;
-                height: 100%;
-                background-position: center;
-                background-size: cover; }
+                position: relative;
+                width: 100%; }
+              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-1 {
+                background-image: url("../images/design_lab.jpg"); }
+              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-2 {
+                background-image: url("../images/picture_perfect.jpg"); }
+              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-3 {
+                background-image: url("../images/your_life.jpg"); }
+              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .photo-layer {
+                background-color: rgba(32, 51, 114, 0.692);
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0; }
           .sect-projects .project-container .left-side .list-left-side .cell .arrow {
-            position: absolute;
             background-color: #979db1;
-            transition-duration: .5s;
+            box-shadow: 0px 0px 10px 0px #979db1;
             height: 2rem;
-            width: 2rem;
-            top: calc(50% - 1rem);
+            position: absolute;
             right: 0;
+            top: calc(50% - 1rem);
             transform: matrix(0.71, 0.71, -0.71, 0.71, 16, 0);
-            box-shadow: 0px 0px 10px 0px #979db1; }
-          .sect-projects .project-container .left-side .list-left-side .cell h3 {
+            transition-duration: .5s;
+            width: 2rem; }
+          .sect-projects .project-container .left-side .list-left-side .cell .header-of-cell-title {
+            border: 0;
             margin: 0;
-            border: 0; }
+            position: relative; }
           .sect-projects .project-container .left-side .list-left-side .cell i {
             font-size: 1.5rem;
-            margin-right: 10px; }
+            left: -1rem;
+            margin-right: 10px;
+            position: absolute; }
           .sect-projects .project-container .left-side .list-left-side .cell .tech-used {
             display: -ms-flexbox;
             display: flex; }
             .sect-projects .project-container .left-side .list-left-side .cell .tech-used .cell-icon {
               width: 2.5rem; }
     .sect-projects .project-container .right-side {
-      width: 100%;
-      background-image: url("../images/dev_office.jpg");
+      background-image: url("../images/dev_office2.jpg");
+      background-position: center right;
       background-size: cover;
-      background-position: center right; }
+      width: 100%; }
 
 /*# sourceMappingURL=style.prefixed.css.map */
