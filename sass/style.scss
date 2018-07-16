@@ -34,7 +34,10 @@ $navSize: 3.5rem;
 $navFontSize: 1rem;
 $navFontWeight: 700;
 // button up
-$buttonUpColor: rgba(32, 51, 114, 0.5);
+$buttonUpColor: rgba(32,
+51,
+114,
+0.5);
 // technologies 
 $techHeightLine: 0.9rem;
 $techLineColor: rgb(255,
@@ -43,7 +46,10 @@ $techLineColor: rgb(255,
 $techBoxShadow: 0px 0px 10px 0px $techLineColor;
 //projects
 $projectsMainColor: rgb(151, 157, 177);
-$projectsHoverColor: rgb(3, 14, 55);
+$projectsHoverColor: rgb(3,
+14,
+55);
+
 // mixins
 @mixin titleOfSection() {
     background-color: $colorOfNav;
@@ -67,19 +73,21 @@ $projectsHoverColor: rgb(3, 14, 55);
     position: relative;
 }
 
-#btnUp-js {
-    position: fixed;
-    height: 5rem;
-    width: 5rem;
-    background-color: $buttonUpColor;
-    right: 1rem;
-    bottom: 3rem;
+#btnCircleUp-js {
+    background-color: rgba(255, 255, 255, 0);
     border: none;
+    bottom: 1rem;
+    cursor: pointer;
+    height: 5rem;
+    position: fixed;
+    right: 1rem;
+    width: 5rem;
     z-index: 4;
-    border-radius: 8%;
+    border-radius: 50%;
     i {
-        font-size: 4rem;
         color: $colorOfNav; 
+        font-size: 4rem;
+        opacity: 0.7;
     }
 }
 
@@ -238,12 +246,14 @@ header {
             .list-left-side {
                 display: flex;
                 flex-direction: column;
-
                 .cell {
-                    margin-bottom: 4rem;
+                    margin-bottom: 5rem;
                     padding: 2rem;
                     position: relative;
                     transition-duration: .5s;
+                    .cell-paragraph {
+                        min-height: 60px;
+                    }
                     &:hover {
                         background-color: $projectsHoverColor;
                         box-shadow: 0px 0px 10px 0px $projectsHoverColor;
@@ -255,6 +265,12 @@ header {
                     &:hover .project-min .photo-cell {
                         background-color: $projectsHoverColor;
                         box-shadow: 0px 0px 10px 0px $projectsHoverColor;
+                    }
+                    &:hover .project-min [class*="rea-"] .photo-layer {
+                        opacity: 1;
+                    }
+                    &:hover .project-min [class*="rea-"] .layer-icon {
+                        opacity: 1;
                     }
                     .project-min {
                         position: absolute;
@@ -287,9 +303,25 @@ header {
                                 background-color: rgba(32, 51, 114, 0.692);
                                 bottom: 0;
                                 left: 0;
+                                opacity: 0;
                                 position: absolute;
                                 right: 0;
                                 top: 0;
+                                transition-duration: 0.5s;
+                            }
+                            .layer-icon {
+                                color: rgb(242, 242, 255);
+                                font-size: 4rem;
+                                opacity: 0;
+                                position: absolute;
+                                top: calc(50% - 2rem);
+                                transition-duration: 0.5s;
+                            }
+                            [class*="code"] {
+                                left: 22rem;
+                            }
+                            [class*="sear"] {
+                                right: 22rem;
                             }
                         }                          
                     }
@@ -309,7 +341,7 @@ header {
                         margin: 0;
                         position: relative;
                     }
-                    i {
+                    .right-arrow {
                         font-size: 1.5rem;
                         left: -1rem;
                         margin-right: 10px;
@@ -325,9 +357,10 @@ header {
             }
         }
         .right-side {
-            background-image: url("../images/dev_office2.jpg");
-            background-position: center right;
+            background-image: url("../images/dev_office.jpg");
+            background-position: center;
             background-size: cover;
+            background-attachment: fixed;
             width: 100%;
         }
     }
