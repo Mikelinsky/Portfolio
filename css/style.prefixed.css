@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:400,500,700,800,900");
 * {
   box-sizing: border-box; }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Exo 2", sans-serif;
   margin: 0;
   position: relative; }
 
@@ -36,12 +36,11 @@ body {
     opacity: 0.7; }
 
 header {
-  background-attachment: fixed;
-  background-image: url("../images/header_devstudio_med.jpeg");
+  background-image: url("../images/header_devstudio_large.jpg");
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh; }
+  height: 85vh; }
   header .navbar-container {
     -ms-flex-align: center;
         align-items: center;
@@ -52,7 +51,8 @@ header {
         justify-content: space-between;
     position: fixed;
     width: 100vw;
-    z-index: 1; }
+    z-index: 1;
+    top: 7.5rem; }
     header .navbar-container .nav-elem {
       background-color: #203372;
       box-shadow: 0px 0px 10px 0px #203372;
@@ -60,21 +60,24 @@ header {
       width: 10vw; }
     header .navbar-container .logo-container {
       position: relative;
-      width: auto; }
+      width: auto;
+      min-width: 22rem; }
       header .navbar-container .logo-container a {
         display: block;
         height: 3.5rem;
         position: absolute;
         top: calc(50% - 1.75rem);
-        width: 100%; }
+        width: 100%;
+        z-index: 1; }
       header .navbar-container .logo-container img {
         height: auto;
-        width: 100%; }
+        width: 100%;
+        position: absolute;
+        top: -151px; }
     header .navbar-container nav {
       background-color: #203372;
       box-shadow: 0px 0px 10px 0px #203372;
-      color: #fff;
-      font-family: "Moontserrat", sans-serif;
+      color: white;
       font-weight: 700;
       height: 3.5rem;
       letter-spacing: 2.5px;
@@ -193,10 +196,14 @@ header {
   .sect-projects .project-container {
     display: -ms-flexbox;
     display: flex;
-    margin: 0 auto 0 0; }
+    margin: 0 auto 0 0;
+    background-image: url("../images/office.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; }
     .sect-projects .project-container .left-side {
-      background-color: #979db1;
-      box-shadow: 0px 0px 10px 0px #979db1;
+      background-color: #1f3786;
+      box-shadow: 0px 0px 10px 0px #1f3786;
       color: white;
       display: -ms-flexbox;
       display: flex;
@@ -215,14 +222,15 @@ header {
           .sect-projects .project-container .left-side .list-left-side .cell .cell-paragraph {
             min-height: 60px; }
           .sect-projects .project-container .left-side .list-left-side .cell:hover {
-            background-color: #030e37;
-            box-shadow: 0px 0px 10px 0px #030e37; }
+            background-color: #f9fafd;
+            box-shadow: 0px 0px 10px 0px #f9fafd;
+            color: black; }
           .sect-projects .project-container .left-side .list-left-side .cell:hover .arrow {
-            background-color: #030e37;
-            box-shadow: 0px 0px 10px 0px #030e37; }
+            background-color: #f9fafd;
+            box-shadow: 0px 0px 10px 0px #f9fafd; }
           .sect-projects .project-container .left-side .list-left-side .cell:hover .project-min .photo-cell {
-            background-color: #030e37;
-            box-shadow: 0px 0px 10px 0px #030e37; }
+            background-color: #f9fafd;
+            box-shadow: 0px 0px 10px 0px #f9fafd; }
           .sect-projects .project-container .left-side .list-left-side .cell:hover .project-min [class*="rea-"] .photo-layer {
             opacity: 1; }
           .sect-projects .project-container .left-side .list-left-side .cell:hover .project-min [class*="rea-"] .layer-icon {
@@ -232,8 +240,8 @@ header {
             right: -65rem;
             top: calc(50% - 9rem); }
             .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell {
-              background-color: #979db1;
-              box-shadow: 0px 0px 10px 0px #979db1;
+              background-color: #1f3786;
+              box-shadow: 0px 0px 10px 0px #1f3786;
               height: 18rem;
               padding: 1rem;
               transition-duration: 0.5s;
@@ -271,8 +279,8 @@ header {
               .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell [class*="sear"] {
                 right: 22rem; }
           .sect-projects .project-container .left-side .list-left-side .cell .arrow {
-            background-color: #979db1;
-            box-shadow: 0px 0px 10px 0px #979db1;
+            background-color: #1f3786;
+            box-shadow: 0px 0px 10px 0px #1f3786;
             height: 2rem;
             position: absolute;
             right: 0;
@@ -295,10 +303,85 @@ header {
             .sect-projects .project-container .left-side .list-left-side .cell .tech-used .cell-icon {
               width: 2.5rem; }
     .sect-projects .project-container .right-side {
-      background-image: url("../images/dev_office.jpg");
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
+      background-color: rgba(255, 255, 255, 0.521);
       width: 100%; }
+
+#footer {
+  padding: 4rem 0 8rem 0;
+  position: relative;
+  background-color: rgba(32, 51, 114, 0.342);
+  height: 70vh; }
+  #footer .title-footer {
+    background-color: #203372;
+    color: white;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 2rem 30px;
+    position: absolute;
+    top: -4.5rem; }
+  #footer .footer-layer {
+    background-image: url("../images/footer_cyclone.jpg");
+    background-position: center;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1; }
+  #footer .contact-data {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    #footer .contact-data .contact-icon {
+      color: white;
+      font-size: 2rem;
+      display: inline-block; }
+  #footer .footer-form {
+    background-color: rgba(32, 51, 114, 0);
+    display: inline-block;
+    padding: 1.6rem;
+    width: 40%; }
+    #footer .footer-form form .form-elem {
+      background-color: rgba(255, 255, 255, 0);
+      border: 3px solid white;
+      box-shadow: 0 0 0.2px white;
+      display: block;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      color: white; }
+    #footer .footer-form form input::-webkit-input-placeholder, #footer .footer-form form textarea::-webkit-input-placeholder {
+      color: white;
+      font-family: "Exo 2", sans-serif; }
+    #footer .footer-form form input:-ms-input-placeholder, #footer .footer-form form textarea:-ms-input-placeholder {
+      color: white;
+      font-family: "Exo 2", sans-serif; }
+    #footer .footer-form form input::placeholder, #footer .footer-form form textarea::placeholder {
+      color: white;
+      font-family: "Exo 2", sans-serif; }
+    #footer .footer-form form .form-btn {
+      background-color: rgba(255, 255, 255, 0);
+      background-image: linear-gradient(45deg, #fcfcfc 50%, transparent 50%);
+      background-position: 100% 0;
+      background-size: 300%;
+      border: 3px solid white;
+      box-shadow: 0 0 0.2px white;
+      color: white;
+      cursor: pointer;
+      display: block;
+      font-family: "Exo 2", sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.1rem;
+      margin-left: auto;
+      padding: 1rem 1.5rem;
+      text-transform: uppercase;
+      transition-duration: 0.5s; }
+      #footer .footer-form form .form-btn:hover {
+        background-position: 0 100%;
+        color: rgba(50, 40, 136, 0.473); }
 
 /*# sourceMappingURL=style.prefixed.css.map */
