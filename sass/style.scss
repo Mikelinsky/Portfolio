@@ -27,7 +27,9 @@ $colorOfNav: rgba(32,
 51,
 114,
 1);
-$colorFontNav: rgb(255, 255, 255);
+$colorFontNav: rgb(255,
+255,
+255);
 $navBoxShadow: 0px 0px 10px 0px rgb(32,
 51,
 114);
@@ -35,39 +37,94 @@ $navSize: 3.5rem;
 $navFontSize: 1rem;
 $navFontWeight: 700;
 // button up
-$buttonUpColor: rgba(255, 255, 255, 0);
+$buttonUpColor: rgba(255,
+255,
+255,
+0);
 // technologies 
 $techHeightLine: 0.9rem;
 $techLineColor: rgb(255,
 255,
 255);
 $techBoxShadow: 0px 0px 10px 0px $techLineColor;
-$techBackgroundColor: rgb(236, 236, 236);
-$techColorLayer: rgba(32, 51, 114, 0.692);
+$techBackgroundColor: rgb(236,
+236,
+236);
+$techColorLayer: rgba(32,
+51,
+114,
+0.692);
 //projects
-$projectsMainColor: rgb(31, 55, 134);
-$projectsHoverColor: rgb(249, 250, 253);
-$projectsLeftSideFontColor: rgb(255, 255, 255);
-$projectsHoverFontColor: rgb(0, 0, 0);
-$projectsPhotoLayerColor: rgba(32, 51, 114, 0.692);
-$projectsLayerIconColor: rgb(242, 242, 255);
+$projectsMainColor: rgb(31,
+55,
+134);
+$projectsHoverColor: rgb(249,
+250,
+253);
+$projectsLeftSideFontColor: rgb(255,
+255,
+255);
+$projectsHoverFontColor: rgb(0,
+0,
+0);
+$projectsPhotoLayerColor: rgba(32,
+51,
+114,
+0.692);
+$projectsLayerIconColor: rgb(242,
+242,
+255);
 //footer
-$footerFormBackgroundColor: rgba(255, 255, 255, 0);
-$footerFormBorderColor: rgb(255, 255, 255);
-$footerFormPlaceholderColor: rgb(255, 255, 255);
-$footerFormButtonColor: rgba(255, 255, 255, 0);
-$footerFormButtonBorderColor: rgb(255, 255, 255);
-$footerFormContainerColor: rgba(32, 51, 114, 0);
-$footerFormIconColor: rgb(255, 255, 255);
-$footerBackgroundColor: rgba(32, 51, 114, 0.342);
-$footerShadowColor: rgb(255, 255, 255);
-$footerFontColor: rgb(255, 255, 255);
-$footerBtnHoverColor: rgb(252, 252, 252);
-$footerBtnBackgroundColor: rgba(255, 255, 255, 0);
-$footerBtnHoverFontColor: rgba(50, 40, 136, 0.473); 
+$footerFormBackgroundColor: rgba(255,
+255,
+255,
+0);
+$footerFormBorderColor: rgb(255,
+255,
+255);
+$footerFormPlaceholderColor: rgb(255,
+255,
+255);
+$footerFormButtonColor: rgba(255,
+255,
+255,
+0);
+$footerFormButtonBorderColor: rgb(255,
+255,
+255);
+$footerFormContainerColor: rgba(32,
+51,
+114,
+0);
+$footerFormIconColor: rgb(255,
+255,
+255);
+$footerBackgroundColor: rgba(32,
+51,
+114,
+0.342);
+$footerShadowColor: rgb(255,
+255,
+255);
+$footerFontColor: rgb(255,
+255,
+255);
+$footerBtnHoverColor: rgb(252,
+252,
+252);
+$footerBtnBackgroundColor: rgba(255,
+255,
+255,
+0);
+$footerBtnHoverFontColor: rgba(19,
+5,
+109,
+0.452);
 $footerBoxShadow: 0 0 0.2px $footerShadowColor;
 // mixins
-$titleFontColor: rgb(255, 255, 255);
+$titleFontColor: rgb(255,
+255,
+255);
 @mixin titleOfSection() {
     background-color: $colorOfNav;
     color: $titleFontColor;
@@ -90,8 +147,9 @@ $titleFontColor: rgb(255, 255, 255);
     position: relative;
 }
 
+
 #btnCircleUp-js {
-    background-color: $buttonUpColor; 
+    background-color: $buttonUpColor;
     border: none;
     bottom: 1rem;
     cursor: pointer;
@@ -102,7 +160,7 @@ $titleFontColor: rgb(255, 255, 255);
     z-index: 4;
     border-radius: 50%;
     i {
-        color: $colorOfNav; 
+        color: $colorOfNav;
         font-size: 4rem;
         opacity: 0.7;
     }
@@ -251,12 +309,12 @@ header {
         margin-bottom: 3rem;
     }
     .header-used-technologies {
-        margin: 0 0 0.5rem 0; 
+        margin: 0 0 0.5rem 0;
     }
     .project-container {
         display: flex;
         margin: 0 auto 0 0;
-        background-image: url("../images/office.jpeg"); 
+        background-image: url("../images/office.jpeg");
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -348,7 +406,7 @@ header {
                             [class*="sear"] {
                                 right: 22rem;
                             }
-                        }                          
+                        }
                     }
                     .arrow {
                         background-color: $projectsMainColor;
@@ -372,7 +430,7 @@ header {
                         margin-right: 10px;
                         position: absolute;
                     }
-                    .tech-used {  
+                    .tech-used {
                         display: flex;
                         .cell-icon {
                             width: 2.5rem;
@@ -406,56 +464,80 @@ header {
         top: 0;
         z-index: -1;
     }
-    .contact-data {
+    .flex-area {
         display: flex;
-        flex-direction: column;
         justify-content: space-around;
-        .contact-icon {
-            color: $footerFormIconColor;
-            font-size: 2rem;
-            display: inline-block;
+        .data-container {
+            display: flex;
+            align-items: center;
+            .contact-data {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .my-name {
+                    margin-bottom: 0.6rem;
+                    font-size: 2em;
+                    font-weight: 700;
+                }
+                .telephone-number {
+                    font-size: 1.3em;
+                    margin-bottom: 0.6rem;
+                }
+                .icon-container {
+                    .icon-link {
+                        margin: 0 1rem;
+                        .contact-icon {
+                            color: $footerFormIconColor;
+                            font-size: 2.5rem;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
         }
-    }
-    .footer-form {
-        background-color: $footerFormContainerColor;
-        display: inline-block;
-        padding: 1.6rem;
-        width: 40%;
-        form {
-            .form-elem {
-                background-color: $footerFormBackgroundColor;
-                border: 3px solid $footerFormBorderColor;
-                box-shadow: $footerBoxShadow;
-                display: block;
-                margin-bottom: 0.5rem;
-                padding: 0.5rem;
-                width: 100%;
-                color: $footerFontColor;
-            }
-            input::placeholder, textarea::placeholder {
-                color: $footerFormPlaceholderColor;
-                font-family: "Exo 2", sans-serif;
-            }
-            .form-btn {
-                background-color: $footerBtnBackgroundColor; 
-                background-image: linear-gradient(45deg, $footerBtnHoverColor 50%, transparent 50%);
-                background-position: 100% 0;
-                background-size: 300%;
-                border: 3px solid $footerFormButtonBorderColor;
-                box-shadow: $footerBoxShadow;
-                color: $footerFormPlaceholderColor;
-                cursor: pointer;
-                display: block;
-                font-family: "Exo 2", sans-serif;
-                font-weight: 900;
-                letter-spacing: 0.1rem;
-                margin-left: auto;
-                padding: 1rem 1.5rem;
-                text-transform: uppercase;
-                transition-duration: 0.5s;
-                &:hover {
-                    background-position: 0 100%; 
-                    color: $footerBtnHoverFontColor;
+        .footer-form {
+            background-color: $footerFormContainerColor;
+            display: inline-block;
+            width: 40%;
+            form {
+                .form-elem {
+                    background-color: $footerFormBackgroundColor;
+                    border: 3px solid $footerFormBorderColor;
+                    box-shadow: $footerBoxShadow;
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    padding: 0.5rem;
+                    width: 100%;
+                    color: $footerFontColor;
+                }
+                input::placeholder,
+                textarea::placeholder {
+                    color: $footerFormPlaceholderColor;
+                    font-family: "Exo 2", sans-serif;
+                }
+                .form-btn {
+                    background-color: $footerBtnBackgroundColor;
+                    background-image: linear-gradient(45deg, $footerBtnHoverColor 50%, transparent 50%);
+                    background-position: 100% 0;
+                    background-size: 300%;
+                    border: 3px solid $footerFormButtonBorderColor;
+                    box-shadow: $footerBoxShadow;
+                    color: $footerFormPlaceholderColor;
+                    cursor: pointer;
+                    display: block;
+                    font-family: "Exo 2", sans-serif;
+                    font-weight: 900;
+                    letter-spacing: 0.1rem;
+                    margin-left: auto;
+                    padding: 1rem 1.5rem;
+                    text-transform: uppercase;
+                    transition-duration: 0.5s;
+                    font-size: 1.1em;
+                    &:hover {
+                        background-position: 0 100%;
+                        color: $footerBtnHoverFontColor;
+                    }
                 }
             }
         }
