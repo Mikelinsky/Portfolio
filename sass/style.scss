@@ -99,40 +99,40 @@ $footerFormContainerColor: rgba(32,
 $footerFormIconColor: rgb(255,
 255,
 255);
-$footerBackgroundColor: rgba(32,
-51,
-114,
-0.342);
+$footerBackgroundColor: rgba(32, 51, 114, 0.57);
 $footerShadowColor: rgb(255,
 255,
 255);
 $footerFontColor: rgb(255,
 255,
 255);
-$footerBtnHoverColor: rgb(252,
-252,
-252);
+$footerBtnHoverColor: $colorOfNav;
 $footerBtnBackgroundColor: rgba(255,
 255,
 255,
 0);
-$footerBtnHoverFontColor: rgba(19,
-5,
-109,
-0.452);
-$footerBoxShadow: 0 0 0.2px $footerShadowColor;
+$footerBtnHoverFontColor: rgb(255,
+255,
+255);
+$footerDataColor: rgb(255,
+255,
+255);
+$footerIconHoverColor: $colorOfNav;
+$footerBoxShadow: 0 0 0.2px rgb(255,
+255,
+255);
 // mixins
 $titleFontColor: rgb(255,
 255,
 255);
-@mixin titleOfSection() {
+@mixin titleOfSection($topValue) {
     background-color: $colorOfNav;
     color: $titleFontColor;
     display: inline-block;
     font-size: 2rem;
     padding: 2rem 30px;
     position: absolute;
-    top: -4.5rem;
+    top: $topValue;
 }
 
 @mixin headerOfSection() {
@@ -142,11 +142,13 @@ $titleFontColor: rgb(255,
     margin: 0;
 }
 
-@mixin sections() {
-    padding: 4rem 0 8rem 0;
+@mixin sections($topPadding,
+$rightPadding,
+$bottomPadding,
+$leftPadding) {
+    padding: $topPadding $rightPadding $bottomPadding $leftPadding;
     position: relative;
 }
-
 
 #btnCircleUp-js {
     background-color: $buttonUpColor;
@@ -191,6 +193,7 @@ header {
             position: relative;
             width: auto;
             min-width: 22rem;
+            transition-duration: 0.3s;
             a {
                 display: block;
                 height: $navSize;
@@ -199,11 +202,25 @@ header {
                 width: 100%;
                 z-index: 1;
             }
-            img {
+            .big-logo {
                 height: auto;
                 width: 100%;
                 position: absolute;
                 top: -151px;
+            
+            }
+            .small-logo {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                visibility: hidden;
+                top: -100px;
+            }
+            .hidden {
+                visibility: hidden;
+            }
+            .visible {
+                visibility: visible;
             }
         }
         nav {
@@ -238,17 +255,23 @@ header {
 }
 
 .sect-about-me {
-    @include sections();
+    @include sections(4rem,
+    0,
+    8rem,
+    0);
     .header-of-about-me {
         @include headerOfSection();
     }
     .title-about-me {
-        @include titleOfSection();
+        @include titleOfSection(-4.5rem);
     }
 }
 
 .sect-technologies {
-    @include sections();
+    @include sections(4rem,
+    0,
+    8rem,
+    0);
     background-color: $techBackgroundColor;
     .header-of-technologies {
         @include headerOfSection();
@@ -270,7 +293,7 @@ header {
         z-index: -1;
     }
     .title-technologies {
-        @include titleOfSection();
+        @include titleOfSection(-4.5rem);
     }
     [class*="ech-"] {
         width: 7.5rem;
@@ -300,9 +323,12 @@ header {
 }
 
 .sect-projects {
-    @include sections();
+    @include sections(4rem,
+    0,
+    8rem,
+    0);
     .title-projects {
-        @include titleOfSection();
+        @include titleOfSection(-4.5rem);
     }
     .header-of-projects {
         @include headerOfSection();
@@ -335,6 +361,9 @@ header {
                     transition-duration: .5s;
                     .cell-paragraph {
                         min-height: 60px;
+                    }
+                    .cell-icon {
+                        margin-right: 0.3em;
                     }
                     &:hover {
                         background-color: $projectsHoverColor;
@@ -447,11 +476,14 @@ header {
 }
 
 #footer {
-    @include sections();
+    @include sections(8rem,
+    0,
+    4rem,
+    0);
     background-color: $footerBackgroundColor;
     height: 70vh;
     .title-footer {
-        @include titleOfSection();
+        @include titleOfSection(-2rem);
     }
     .footer-layer {
         background-image: url("../images/footer_cyclone.jpg");
@@ -479,10 +511,12 @@ header {
                     margin-bottom: 0.6rem;
                     font-size: 2em;
                     font-weight: 700;
+                    color: $footerDataColor;
                 }
                 .telephone-number {
                     font-size: 1.3em;
                     margin-bottom: 0.6rem;
+                    color: $footerDataColor;
                 }
                 .icon-container {
                     .icon-link {
@@ -491,6 +525,10 @@ header {
                             color: $footerFormIconColor;
                             font-size: 2.5rem;
                             display: inline-block;
+                            transition-duration: 0.5s;
+                            &:hover {
+                                color: $footerIconHoverColor;
+                            }
                         }
                     }
                 }
@@ -530,13 +568,12 @@ header {
                     font-weight: 900;
                     letter-spacing: 0.1rem;
                     margin-left: auto;
-                    padding: 1rem 1.5rem;
+                    padding: 0.8rem 1.5rem;
                     text-transform: uppercase;
                     transition-duration: 0.5s;
-                    font-size: 1.1em;
+                    font-size: 0.9em;
                     &:hover {
-                        background-position: 0 100%;
-                        color: $footerBtnHoverFontColor;
+                        background-position: 0 100%; //color: $footerBtnHoverFontColor;
                     }
                 }
             }
