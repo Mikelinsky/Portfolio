@@ -1,5 +1,5 @@
 window.onload = function() {
-	//navbar
+	//scroll function
 	jQuery(function watchScroll() {
 		$(window).scroll(function() {
 			var positionOfScroll = $(window).scrollTop();

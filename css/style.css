@@ -19,16 +19,14 @@ body {
 
 #btnCircleUp-js {
   background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
   border: none;
   bottom: 1rem;
   cursor: pointer;
-  height: 5rem;
+  display: none;
   position: fixed;
   right: 1rem;
-  width: 5rem;
-  z-index: 4;
-  border-radius: 50%;
-  display: none; }
+  z-index: 4; }
   #btnCircleUp-js i {
     color: #4137cf;
     font-size: 4rem;
@@ -39,7 +37,45 @@ header {
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 85vh; }
+  height: 85vh;
+  position: relative; }
+  header .responsive-navbar {
+    background-color: rgba(16, 31, 85, 0.49);
+    width: 100%;
+    display: none;
+    flex-wrap: wrap; }
+    header .responsive-navbar .hamburger-container {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      header .responsive-navbar .hamburger-container .hamburger {
+        background-color: rgba(16, 31, 85, 0);
+        border: none; }
+        header .responsive-navbar .hamburger-container .hamburger .hamburger-icon {
+          color: #101f55;
+          font-size: 1.8rem; }
+    header .responsive-navbar .hamburger-menu {
+      width: 100%; }
+      header .responsive-navbar .hamburger-menu .hamburger-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0; }
+        header .responsive-navbar .hamburger-menu .hamburger-list li {
+          margin: 0.5rem; }
+          header .responsive-navbar .hamburger-menu .hamburger-list li a {
+            color: white;
+            font-size: 1rem;
+            text-decoration: none; }
+    header .responsive-navbar .logo-container {
+      width: 50%;
+      height: 15vh; }
+      header .responsive-navbar .logo-container .responsive-navbar-logo {
+        width: 100%;
+        height: auto; }
   header .navbar-container {
     align-items: center;
     display: flex;
@@ -396,5 +432,25 @@ header {
         font-size: 0.9em; }
         #footer .flex-area .footer-form form .form-btn:hover {
           background-position: 0 100%; }
+
+/* ---------------- Media Queries ----------------- */
+@media (max-width: 575.98px) {
+  #btnCircleUp-js i {
+    font-size: 3rem; }
+
+  header .responsive-navbar {
+    display: flex; }
+  header .navbar-container {
+    display: none; }
+
+  .sect-about-me .title-about-me {
+    background-color: #101f55;
+    color: white;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 2rem 30px;
+    position: absolute;
+    top: -3.5rem;
+    padding: 1.5rem 30px; } }
 
 /*# sourceMappingURL=style.css.map */
