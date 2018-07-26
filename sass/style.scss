@@ -23,24 +23,20 @@ body {
 
 //          SASS
 //navbar
-$colorOfNav: rgba(32,
-51,
-114,
-1);
+$colorOfNav: rgb(16, 31, 85);
 $colorFontNav: rgb(255,
 255,
 255);
-$navBoxShadow: 0px 0px 10px 0px rgb(32,
-51,
-114);
+$navBoxShadow: 0px 0px 10px 0px $colorOfNav;
 $navSize: 3.5rem;
 $navFontSize: 1rem;
 $navFontWeight: 700;
 // button up
-$buttonUpColor: rgba(255,
+$buttonUpBackgroundColor: rgba(255,
 255,
 255,
 0);
+$buttonUpColor: rgb(65, 55, 207);
 // technologies 
 $techHeightLine: 0.9rem;
 $techLineColor: rgb(255,
@@ -149,9 +145,12 @@ $leftPadding) {
     padding: $topPadding $rightPadding $bottomPadding $leftPadding;
     position: relative;
 }
+@mixin setNavbarAnimat($aniTime: 0.5s) {
+    transition-duration: $aniTime;
+}
 
 #btnCircleUp-js {
-    background-color: $buttonUpColor;
+    background-color: $buttonUpBackgroundColor;
     border: none;
     bottom: 1rem;
     cursor: pointer;
@@ -163,7 +162,7 @@ $leftPadding) {
     border-radius: 50%;
     display: none;
     i {
-        color: $colorOfNav;
+        color: $buttonUpColor;
         font-size: 4rem;
         opacity: 0.7;
     }
@@ -184,17 +183,19 @@ header {
         width: 100vw;
         z-index: 1;
         top: 7.5rem;
+        @include setNavbarAnimat(0.3s);
         .nav-elem {
             background-color: $colorOfNav;
             box-shadow: $navBoxShadow;
             height: $navSize;
             width: 10vw;
+            @include setNavbarAnimat(0.3s);
         }
         .logo-container {
             position: relative;
             width: auto;
             min-width: 22rem;
-            transition-duration: 0.3s;
+            @include setNavbarAnimat(0.5s);
             a {
                 display: block;
                 height: $navSize;
@@ -208,20 +209,22 @@ header {
                 width: 100%;
                 position: absolute;
                 top: -151px;
-            
             }
             .small-logo {
                 position: absolute;
                 width: 100%;
                 height: auto;
                 visibility: hidden;
+
                 top: -100px;
             }
             .hidden {
                 visibility: hidden;
+
             }
             .visible {
                 visibility: visible;
+
             }
         }
         nav {
@@ -232,6 +235,7 @@ header {
             height: $navSize;
             letter-spacing: 2.5px;
             width: 80vw;
+            @include setNavbarAnimat(0.3s);
             ul {
                 align-items: center;
                 display: flex;
@@ -240,7 +244,6 @@ header {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                text-transform: uppercase;
                 li {
                     line-height: $navSize;
                     margin-right: 60px;

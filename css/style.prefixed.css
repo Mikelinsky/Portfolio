@@ -32,7 +32,7 @@ body {
   border-radius: 50%;
   display: none; }
   #btnCircleUp-js i {
-    color: #203372;
+    color: #4137cf;
     font-size: 4rem;
     opacity: 0.7; }
 
@@ -53,17 +53,19 @@ header {
     position: fixed;
     width: 100vw;
     z-index: 1;
-    top: 7.5rem; }
+    top: 7.5rem;
+    transition-duration: 0.3s; }
     header .navbar-container .nav-elem {
-      background-color: #203372;
-      box-shadow: 0px 0px 10px 0px #203372;
+      background-color: #101f55;
+      box-shadow: 0px 0px 10px 0px #101f55;
       height: 3.5rem;
-      width: 10vw; }
+      width: 10vw;
+      transition-duration: 0.3s; }
     header .navbar-container .logo-container {
       position: relative;
       width: auto;
       min-width: 22rem;
-      transition-duration: 0.3s; }
+      transition-duration: 0.5s; }
       header .navbar-container .logo-container a {
         display: block;
         height: 3.5rem;
@@ -87,13 +89,14 @@ header {
       header .navbar-container .logo-container .visible {
         visibility: visible; }
     header .navbar-container nav {
-      background-color: #203372;
-      box-shadow: 0px 0px 10px 0px #203372;
+      background-color: #101f55;
+      box-shadow: 0px 0px 10px 0px #101f55;
       color: white;
       font-weight: 700;
       height: 3.5rem;
       letter-spacing: 2.5px;
-      width: 80vw; }
+      width: 80vw;
+      transition-duration: 0.3s; }
       header .navbar-container nav ul {
         -ms-flex-align: center;
             align-items: center;
@@ -104,8 +107,7 @@ header {
             justify-content: center;
         list-style-type: none;
         margin: 0;
-        padding: 0;
-        text-transform: uppercase; }
+        padding: 0; }
         header .navbar-container nav ul li {
           line-height: 3.5rem;
           margin-right: 60px; }
@@ -118,12 +120,12 @@ header {
   padding: 4rem 0 8rem 0;
   position: relative; }
   .sect-about-me .header-of-about-me {
-    border-bottom: 3px solid #203372;
+    border-bottom: 3px solid #101f55;
     display: inline-block;
     line-height: 3.5rem;
     margin: 0; }
   .sect-about-me .title-about-me {
-    background-color: #203372;
+    background-color: #101f55;
     color: white;
     display: inline-block;
     font-size: 2rem;
@@ -136,7 +138,7 @@ header {
   position: relative;
   background-color: #ececec; }
   .sect-technologies .header-of-technologies {
-    border-bottom: 3px solid #203372;
+    border-bottom: 3px solid #101f55;
     display: inline-block;
     line-height: 3.5rem;
     margin: 0;
@@ -155,7 +157,7 @@ header {
     top: 0;
     z-index: -1; }
   .sect-technologies .title-technologies {
-    background-color: #203372;
+    background-color: #101f55;
     color: white;
     display: inline-block;
     font-size: 2rem;
@@ -190,7 +192,7 @@ header {
   padding: 4rem 0 8rem 0;
   position: relative; }
   .sect-projects .title-projects {
-    background-color: #203372;
+    background-color: #101f55;
     color: white;
     display: inline-block;
     font-size: 2rem;
@@ -198,7 +200,7 @@ header {
     position: absolute;
     top: -4.5rem; }
   .sect-projects .header-of-projects {
-    border-bottom: 3px solid #203372;
+    border-bottom: 3px solid #101f55;
     display: inline-block;
     line-height: 3.5rem;
     margin: 0;
@@ -326,7 +328,7 @@ header {
   background-color: rgba(32, 51, 114, 0.57);
   height: 70vh; }
   #footer .title-footer {
-    background-color: #203372;
+    background-color: #101f55;
     color: white;
     display: inline-block;
     font-size: 2rem;
@@ -379,7 +381,7 @@ header {
             display: inline-block;
             transition-duration: 0.5s; }
             #footer .flex-area .data-container .contact-data .icon-container .icon-link .contact-icon:hover {
-              color: #203372; }
+              color: #101f55; }
     #footer .flex-area .footer-form {
       background-color: rgba(32, 51, 114, 0);
       display: inline-block;
@@ -407,7 +409,7 @@ header {
         font-family: "Exo 2", sans-serif; }
       #footer .flex-area .footer-form form .form-btn {
         background-color: rgba(255, 255, 255, 0);
-        background-image: linear-gradient(45deg, #203372 50%, transparent 50%);
+        background-image: linear-gradient(45deg, #101f55 50%, transparent 50%);
         background-position: 100% 0;
         background-size: 300%;
         border: 3px solid white;
