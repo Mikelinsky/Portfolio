@@ -181,22 +181,30 @@ header {
         width: 100%;
         display: none;
         flex-wrap: wrap;
+        position: fixed;
+        z-index: 4;
         .hamburger-container {  
-            width: 50%;  
+            width: 60%;  
             display: flex;
             justify-content: center;
             align-items: center;
+            .hamburger-icon {
+                color: $colorOfNav;
+                font-size: 1.8rem;
+            }
+            .hamburger-close {
+                background-color: rgba(16, 31, 85, 0);
+                border: none;
+                display: none;
+            }
             .hamburger {
                 background-color: rgba(16, 31, 85, 0);
                 border: none;
-                .hamburger-icon {
-                    color: $colorOfNav;
-                    font-size: 1.8rem;
-                }
             }
         }
         .hamburger-menu {
             width: 100%;
+            display: none;
             .hamburger-list {
                 display: flex;
                 flex-direction: column;
@@ -215,8 +223,7 @@ header {
             }
         }
         .logo-container {
-            width: 50%;
-            height: 15vh;
+            width: 40%;
             .responsive-navbar-logo {
                 width: 100%;
                 height: auto;
@@ -264,8 +271,8 @@ header {
                 position: absolute;
                 width: 100%;
                 height: auto;
-                visibility: hidden;
-
+                //visibility: hidden;
+                display: none;
                 top: -100px;
             }
             .hidden {
@@ -294,7 +301,7 @@ header {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                li {
+                .hamburger-li {
                     line-height: $navSize;
                     margin-right: 60px;
                     a {

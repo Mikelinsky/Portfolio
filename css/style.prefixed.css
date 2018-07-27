@@ -46,23 +46,30 @@ header {
     width: 100%;
     display: none;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    position: fixed;
+    z-index: 4; }
     header .responsive-navbar .hamburger-container {
-      width: 50%;
+      width: 60%;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
           justify-content: center;
       -ms-flex-align: center;
           align-items: center; }
+      header .responsive-navbar .hamburger-container .hamburger-icon {
+        color: #101f55;
+        font-size: 1.8rem; }
+      header .responsive-navbar .hamburger-container .hamburger-close {
+        background-color: rgba(16, 31, 85, 0);
+        border: none;
+        display: none; }
       header .responsive-navbar .hamburger-container .hamburger {
         background-color: rgba(16, 31, 85, 0);
         border: none; }
-        header .responsive-navbar .hamburger-container .hamburger .hamburger-icon {
-          color: #101f55;
-          font-size: 1.8rem; }
     header .responsive-navbar .hamburger-menu {
-      width: 100%; }
+      width: 100%;
+      display: none; }
       header .responsive-navbar .hamburger-menu .hamburger-list {
         display: -ms-flexbox;
         display: flex;
@@ -80,8 +87,7 @@ header {
             font-size: 1rem;
             text-decoration: none; }
     header .responsive-navbar .logo-container {
-      width: 50%;
-      height: 15vh; }
+      width: 40%; }
       header .responsive-navbar .logo-container .responsive-navbar-logo {
         width: 100%;
         height: auto; }
@@ -125,7 +131,7 @@ header {
         position: absolute;
         width: 100%;
         height: auto;
-        visibility: hidden;
+        display: none;
         top: -100px; }
       header .navbar-container .logo-container .hidden {
         visibility: hidden; }
@@ -151,10 +157,10 @@ header {
         list-style-type: none;
         margin: 0;
         padding: 0; }
-        header .navbar-container nav ul li {
+        header .navbar-container nav ul .hamburger-li {
           line-height: 3.5rem;
           margin-right: 60px; }
-          header .navbar-container nav ul li a {
+          header .navbar-container nav ul .hamburger-li a {
             color: white;
             font-size: 1rem;
             text-decoration: none; }
