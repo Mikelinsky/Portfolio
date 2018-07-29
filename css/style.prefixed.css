@@ -42,13 +42,14 @@ header {
   height: 85vh;
   position: relative; }
   header .responsive-navbar {
-    background-color: rgba(16, 31, 85, 0.49);
     width: 100%;
     display: none;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     position: fixed;
-    z-index: 4; }
+    z-index: 4;
+    padding: 1rem;
+    transition-duration: 0.5s; }
     header .responsive-navbar .hamburger-container {
       width: 60%;
       display: -ms-flexbox;
@@ -131,7 +132,7 @@ header {
         position: absolute;
         width: 100%;
         height: auto;
-        display: none;
+        visibility: hidden;
         top: -100px; }
       header .navbar-container .logo-container .hidden {
         visibility: hidden; }
@@ -479,6 +480,52 @@ header {
 
 /* ---------------- Media Queries ----------------- */
 @media (max-width: 575.98px) {
+  #btnCircleUp-js i {
+    font-size: 3rem; }
+
+  header .responsive-navbar {
+    display: -ms-flexbox;
+    display: flex; }
+  header .navbar-container {
+    display: none; }
+
+  .sect-about-me .title-about-me {
+    background-color: #101f55;
+    color: white;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 2rem 30px;
+    position: absolute;
+    top: -3.5rem;
+    padding: 1.5rem 30px; }
+
+  .sect-technologies .technologies-background-area {
+    padding: 2rem; }
+  .sect-technologies .media-padding {
+    padding: 0; }
+  .sect-technologies [class*="ech-"] {
+    width: 4.5rem;
+    margin-right: 1rem; } }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #btnCircleUp-js i {
+    font-size: 3rem; }
+
+  header .responsive-navbar {
+    display: -ms-flexbox;
+    display: flex; }
+  header .navbar-container {
+    display: none; }
+
+  .sect-about-me .title-about-me {
+    background-color: #101f55;
+    color: white;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 2rem 30px;
+    position: absolute;
+    top: -3.5rem;
+    padding: 1.5rem 30px; } }
+@media (min-width: 768px) and (max-width: 991.98px) {
   #btnCircleUp-js i {
     font-size: 3rem; }
 

@@ -177,12 +177,14 @@ header {
     position: relative;
     //responsive navbar
     .responsive-navbar {
-        background-color: $colorOfRespNav;
+        //background-color: $colorOfRespNav;
         width: 100%;
         display: none;
         flex-wrap: wrap;
         position: fixed;
         z-index: 4;
+        padding: 1rem;
+        @include setNavbarAnimat();
         .hamburger-container {  
             width: 60%;  
             display: flex;
@@ -265,14 +267,14 @@ header {
                 height: auto;
                 width: 100%;
                 position: absolute;
-                top: -151px;
+                top: -151px; 
             }
             .small-logo {
                 position: absolute;
                 width: 100%;
                 height: auto;
-                //visibility: hidden;
-                display: none;
+                visibility: hidden;
+                //display: none;
                 top: -100px;
             }
             .hidden {
@@ -667,16 +669,69 @@ header {
         }
     }
 
+    .sect-technologies {
+        .technologies-background-area {
+            padding: 2rem;
+            
+        }
+        .media-padding {
+            padding: 0;
+        }
+        [class*="ech-"] {
+            width: 4.5rem;
+            margin-right: 1rem;
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {
+    #btnCircleUp-js {
+        i {
+            font-size: 3rem;
+        }
+    }
+    
+    header {
+        .responsive-navbar {
+            display: flex;
+        }
+        .navbar-container {
+            display: none;
+        }
+    }
 
+    .sect-about-me {
+        .title-about-me {
+            @include titleOfSection(-3.5rem);
+            padding: 1.5rem 30px;
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
+    #btnCircleUp-js {
+        i {
+            font-size: 3rem;
+        }
+    }
+    
+    header {
+        .responsive-navbar {
+            display: flex;
+        }
+        .navbar-container {
+            display: none;
+        }
+    }
 
+    .sect-about-me {
+        .title-about-me {
+            @include titleOfSection(-3.5rem);
+            padding: 1.5rem 30px;
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)

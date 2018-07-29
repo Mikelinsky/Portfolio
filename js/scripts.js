@@ -6,8 +6,10 @@ window.onload = function() {
 			console.log(positionOfScroll);
 			
 			if (positionOfScroll >= 450) {
-				//change navbar
 				console.log('change navbar');
+				//change resp navbar
+				$('.responsive-navbar').css('background-color', 'rgba(16, 31, 85, 0.49)');
+				//change navbar
 				$('.navbar-container').css('top', '5.5rem');
 				$('.big-logo').addClass('hidden');
 				$('.small-logo').addClass('visible');
@@ -18,8 +20,10 @@ window.onload = function() {
 				//change btn up
 				$('#btnCircleUp-js').css('display', 'block');
 			} else {
-				//reverse change navbar 
 				console.log('reverse change');
+				//reverse change resp navbar
+				$('.responsive-navbar').removeAttr('style');
+				//reverse change navbar 
 				$('.navbar-container').removeAttr('style');
 				$('.small-logo').removeClass('visible');
 				$('.big-logo').removeClass('hidden');
@@ -45,11 +49,13 @@ window.onload = function() {
 			$('.hamburger-menu').show(700);
 			$('.hamburger').hide();
 			$('.hamburger-close').show();
+			$('.responsive-navbar').css('background-color', 'rgba(16, 31, 85, 0.49)');
 		});
 		$('.hamburger-close').click(function() {
 			$('.hamburger-menu').hide(700);
 			$('.hamburger').show();
 			$('.hamburger-close').hide();
+			$('.responsive-navbar').removeAttr('style');
 		});
 	});
 };
