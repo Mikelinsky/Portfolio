@@ -91,7 +91,8 @@ header {
       width: 40%; }
       header .responsive-navbar .responsive-logo-container .responsive-navbar-logo {
         width: 100%;
-        height: auto; }
+        height: auto;
+        cursor: pointer; }
   header .navbar-container {
     -ms-flex-align: center;
         align-items: center;
@@ -295,26 +296,26 @@ header {
         background-image: url("../images/picture_perfect.jpg"); }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .area-photo-3 {
         background-image: url("../images/your_life.jpg"); }
-      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .photo-layer {
+      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .resp-photo-layer {
         background-color: rgba(32, 51, 114, 0.692);
         bottom: 0;
         left: 0;
-        opacity: 0;
+        opacity: 0.3;
         position: absolute;
         right: 0;
         top: 0;
         transition-duration: 0.5s; }
-      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .layer-icon {
+      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .resp-layer-icon {
         color: #f2f2ff;
-        font-size: 4rem;
-        opacity: 0;
+        font-size: 1.5rem;
+        opacity: 0.8;
         position: absolute;
-        top: calc(50% - 2rem);
+        top: calc(50% - 0.75rem);
         transition-duration: 0.5s; }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell [class*="code"] {
-        left: 22rem; }
+        left: 30%; }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell [class*="sear"] {
-        right: 22rem; }
+        right: 30%; }
   .sect-projects .project-container {
     display: -ms-flexbox;
     display: flex;
@@ -552,6 +553,8 @@ header {
   .sect-about-me {
     padding: 2rem 0 4rem 0;
     position: relative; }
+    .sect-about-me .paragraph {
+      text-align: center; }
     .sect-about-me .title-about-me {
       background-color: #101f55;
       color: white;
@@ -580,12 +583,12 @@ header {
       padding: 2rem; }
     .sect-technologies .line {
       margin: 1.3rem 0 1rem 0;
-      height: 0.5rem; }
+      height: 0.4rem; }
       .sect-technologies .line::before {
-        height: 0.5rem; }
+        height: 0.4rem; }
       .sect-technologies .line .square-arrow {
-        width: 1rem;
-        height: 1rem; }
+        width: 0.9rem;
+        height: 0.9rem; }
     .sect-technologies .media-padding {
       padding: 0; }
     .sect-technologies [class*="ech-"] {

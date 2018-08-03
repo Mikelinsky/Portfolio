@@ -229,6 +229,7 @@ header {
             .responsive-navbar-logo {
                 width: 100%;
                 height: auto;
+                cursor: pointer;
             }
         }
     }
@@ -318,10 +319,7 @@ header {
 }
 
 .sect-about-me {
-    @include sections(4rem,
-    0,
-    8rem,
-    0);
+    @include sections(4rem, 0, 8rem, 0);
     .header-of-about-me {
         @include headerOfSection();
     }
@@ -444,29 +442,29 @@ header {
                 .area-photo-3 {
                     background-image: url("../images/your_life.jpg");
                 }
-                .photo-layer {
+                .resp-photo-layer {
                     background-color: $projectsPhotoLayerColor;
                     bottom: 0;
                     left: 0;
-                    opacity: 0;
+                    opacity: 0.3;
                     position: absolute;
                     right: 0;
                     top: 0;
                     transition-duration: 0.5s;
                 }
-                .layer-icon {
+                .resp-layer-icon {
                     color: $projectsLayerIconColor;
-                    font-size: 4rem;
-                    opacity: 0;
+                    font-size: 1.5rem;
+                    opacity: 0.8;
                     position: absolute;
-                    top: calc(50% - 2rem);
+                    top: calc(50% - 0.75rem);
                     transition-duration: 0.5s;
                 }
                 [class*="code"] {
-                    left: 22rem;
+                    left: 30%;
                 }
                 [class*="sear"] {
-                    right: 22rem;
+                    right: 30%;
                 }
             }
         }
@@ -739,6 +737,9 @@ header {
 
     .sect-about-me {
         @include sections(2rem, 0, 4rem, 0);
+        .paragraph {
+            text-align: center;
+        }
         .title-about-me {
             @include titleOfSection(-2.5rem);
             padding: 1rem 20px;
@@ -758,13 +759,13 @@ header {
         }
         .line {
             margin: 1.3rem 0 1rem 0;
-            height: 0.5rem;
+            height: 0.4rem;
             &::before {
-                height: 0.5rem;
+                height: 0.4rem;
             }
             .square-arrow {
-                width: 1rem;
-                height: 1rem;
+                width: 0.9rem;
+                height: 0.9rem;
             }
         }
         .media-padding {
