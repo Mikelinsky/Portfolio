@@ -224,7 +224,7 @@ header {
                 }
             }
         }
-        .logo-container {
+        .responsive-logo-container {
             width: 40%;
             .responsive-navbar-logo {
                 width: 100%;
@@ -716,8 +716,104 @@ header {
 }
 
 /* ---------------- Media Queries ----------------- */
+@media (max-width: 319.99px) {
+    #btnCircleUp-js {
+        i {
+            font-size: 2rem;
+        }
+    }
+    
+    header {
+        .responsive-navbar {
+            display: flex;
+            .hamburger-container {
+                .hamburger-icon {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .navbar-container {
+            display: none;
+        }
+    }
+
+    .sect-about-me {
+        @include sections(2rem, 0, 4rem, 0);
+        .title-about-me {
+            @include titleOfSection(-2.5rem);
+            padding: 1rem 20px;
+            font-size: 1.5rem;
+        }
+    }
+
+    .sect-technologies {
+        @include sections(2rem, 0, 4rem, 0);
+        .title-technologies {
+            @include titleOfSection(-2.5rem);
+            padding: 1rem 20px;
+            font-size: 1.5rem;
+        }
+        .technologies-background-area {
+            padding: 2rem;
+        }
+        .line {
+            margin: 1.3rem 0 1rem 0;
+            height: 0.5rem;
+            &::before {
+                height: 0.5rem;
+            }
+            .square-arrow {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+        .media-padding {
+            padding: 0;
+        }
+        [class*="ech-"] {
+            width: 20%;
+        }
+    }
+
+    .sect-projects {
+        @include sections(2rem, 0, 4rem, 0);
+        .title-projects {
+            @include titleOfSection(-2.5rem);
+            padding: 1rem 20px;
+            font-size: 1.5rem;
+        }
+        .header-of-projects {
+            @include headerOfSection();
+            margin-bottom: 3rem;
+        }
+        .header-used-technologies {
+            margin: 0 0 0.5rem 0;
+        }
+        .project-container {
+            display: none;
+        }
+        .resp-project-container {
+            display: block;
+            .resp-project-min {
+                .resp-photo-cell {
+                    height: 6rem;
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
+    #footer {
+        @include sections(4rem, 0, 2rem, 0);
+        .title-footer {
+            @include titleOfSection(-1.2rem);
+            padding: 1rem 20px;
+            font-size: 1.5rem;
+        }
+    }
+}
+
 // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
+@media (min-width: 320px) and (max-width: 575.98px) {
     #btnCircleUp-js {
         i {
             font-size: 3rem;
@@ -781,6 +877,11 @@ header {
         }
         .resp-project-container {
             display: block;
+            .resp-project-min {
+                .resp-photo-cell {
+                    padding: 0.5rem;
+                }
+            }
         }
     }
 }

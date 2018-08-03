@@ -87,9 +87,9 @@ header {
             color: white;
             font-size: 1rem;
             text-decoration: none; }
-    header .responsive-navbar .logo-container {
+    header .responsive-navbar .responsive-logo-container {
       width: 40%; }
-      header .responsive-navbar .logo-container .responsive-navbar-logo {
+      header .responsive-navbar .responsive-logo-container .responsive-navbar-logo {
         width: 100%;
         height: auto; }
   header .navbar-container {
@@ -537,7 +537,103 @@ header {
           background-position: 0 100%; }
 
 /* ---------------- Media Queries ----------------- */
-@media (max-width: 575.98px) {
+@media (max-width: 319.99px) {
+  #btnCircleUp-js i {
+    font-size: 2rem; }
+
+  header .responsive-navbar {
+    display: -ms-flexbox;
+    display: flex; }
+    header .responsive-navbar .hamburger-container .hamburger-icon {
+      font-size: 1.3rem; }
+  header .navbar-container {
+    display: none; }
+
+  .sect-about-me {
+    padding: 2rem 0 4rem 0;
+    position: relative; }
+    .sect-about-me .title-about-me {
+      background-color: #101f55;
+      color: white;
+      display: inline-block;
+      font-size: 2rem;
+      padding: 2rem 30px;
+      position: absolute;
+      top: -2.5rem;
+      padding: 1rem 20px;
+      font-size: 1.5rem; }
+
+  .sect-technologies {
+    padding: 2rem 0 4rem 0;
+    position: relative; }
+    .sect-technologies .title-technologies {
+      background-color: #101f55;
+      color: white;
+      display: inline-block;
+      font-size: 2rem;
+      padding: 2rem 30px;
+      position: absolute;
+      top: -2.5rem;
+      padding: 1rem 20px;
+      font-size: 1.5rem; }
+    .sect-technologies .technologies-background-area {
+      padding: 2rem; }
+    .sect-technologies .line {
+      margin: 1.3rem 0 1rem 0;
+      height: 0.5rem; }
+      .sect-technologies .line::before {
+        height: 0.5rem; }
+      .sect-technologies .line .square-arrow {
+        width: 1rem;
+        height: 1rem; }
+    .sect-technologies .media-padding {
+      padding: 0; }
+    .sect-technologies [class*="ech-"] {
+      width: 20%; }
+
+  .sect-projects {
+    padding: 2rem 0 4rem 0;
+    position: relative; }
+    .sect-projects .title-projects {
+      background-color: #101f55;
+      color: white;
+      display: inline-block;
+      font-size: 2rem;
+      padding: 2rem 30px;
+      position: absolute;
+      top: -2.5rem;
+      padding: 1rem 20px;
+      font-size: 1.5rem; }
+    .sect-projects .header-of-projects {
+      border-bottom: 3px solid #101f55;
+      display: inline-block;
+      line-height: 3.5rem;
+      margin: 0;
+      margin-bottom: 3rem; }
+    .sect-projects .header-used-technologies {
+      margin: 0 0 0.5rem 0; }
+    .sect-projects .project-container {
+      display: none; }
+    .sect-projects .resp-project-container {
+      display: block; }
+      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell {
+        height: 6rem;
+        padding: 0.5rem; }
+
+  #footer {
+    padding: 4rem 0 2rem 0;
+    position: relative; }
+    #footer .title-footer {
+      background-color: #101f55;
+      color: white;
+      display: inline-block;
+      font-size: 2rem;
+      padding: 2rem 30px;
+      position: absolute;
+      top: -1.2rem;
+      padding: 1rem 20px;
+      font-size: 1.5rem; } }
+@media (min-width: 320px) and (max-width: 575.98px) {
   #btnCircleUp-js i {
     font-size: 3rem; }
 
@@ -599,7 +695,9 @@ header {
     .sect-projects .project-container {
       display: none; }
     .sect-projects .resp-project-container {
-      display: block; } }
+      display: block; }
+      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell {
+        padding: 0.5rem; } }
 @media (min-width: 576px) and (max-width: 767.98px) {
   #btnCircleUp-js i {
     font-size: 3rem; }
