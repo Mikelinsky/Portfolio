@@ -10,13 +10,16 @@ window.onload = function() {
 				//change resp navbar
 				$('.responsive-navbar').css('background-color', 'rgba(16, 31, 85, 0.49)');
 				//change navbar
-				$('.navbar-container').css('top', '5.5rem');
-				$('.big-logo').addClass('hidden');
-				$('.small-logo').addClass('visible');
-				$('.logo-container').css('min-width', '7rem');
-				$('nav').css('height', '1.2rem');
-				$('.nav-elem').css('height', '1.2rem');
-				$('.hamburger-li').css('line-height', '1rem');
+				function changeNavbar() {
+					$('.navbar-container').css('top', '5.5rem');
+					$('.big-logo').addClass('hidden');
+					$('.small-logo').addClass('visible');
+					$('.logo-container').css('min-width', '7rem');
+					$('nav').css('height', '1.2rem');
+					$('.nav-elem').css('height', '1.2rem');
+					$('.hamburger-li').css('line-height', '1rem');
+				};
+				changeNavbar();
 				//change btn up
 				$('#btnCircleUp-js').css('display', 'block');
 			} else {
@@ -24,13 +27,16 @@ window.onload = function() {
 				//reverse change resp navbar
 				$('.responsive-navbar').removeAttr('style');
 				//reverse change navbar 
-				$('.navbar-container').removeAttr('style');
-				$('.small-logo').removeClass('visible');
-				$('.big-logo').removeClass('hidden');
-				$('.logo-container').removeAttr('style');
-				$('nav').removeAttr('style');
-				$('.nav-elem').removeAttr('style');
-				$('.hamburger-li').removeAttr('style'); 
+				function reverseChangeNavbar() {
+					$('.navbar-container').removeAttr('style');
+					$('.small-logo').removeClass('visible');
+					$('.big-logo').removeClass('hidden');
+					$('.logo-container').removeAttr('style');
+					$('nav').removeAttr('style');
+					$('.nav-elem').removeAttr('style');
+					$('.hamburger-li').removeAttr('style'); 
+				};
+				reverseChangeNavbar();
 				//reverse change btn up
 				$('#btnCircleUp-js').removeAttr('style');
 			}

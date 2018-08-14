@@ -178,18 +178,17 @@ header {
     //responsive navbar
     .responsive-navbar {
         //background-color: $colorOfRespNav;
-        width: 100%;
         display: none;
         flex-wrap: wrap;
-        position: fixed;
-        z-index: 4;
         padding: 1rem;
+        position: fixed;
+        width: 100%;
+        z-index: 4;
         @include setNavbarAnimat();
         .hamburger-container {  
-            width: 60%;  
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: row-reverse;
+            width: 60%;  
             .hamburger-icon {
                 color: $colorOfNav;
                 font-size: 1.8rem;
@@ -208,12 +207,12 @@ header {
             width: 100%;
             display: none;
             .hamburger-list {
+                align-items: center; 
                 display: flex;
                 flex-direction: column;
-                align-items: center; 
                 list-style-type: none;
-                padding: 0;
                 margin: 0; 
+                padding: 0;
                 li {
                     margin: 0.5rem;
                     a {
@@ -235,26 +234,26 @@ header {
     }
 
     .navbar-container {
+        @include setNavbarAnimat(0.3s);
         align-items: center;
         display: flex;
         height: auto;
         justify-content: space-between;
         position: fixed;
+        top: 7.5rem;
         width: 100vw;
         z-index: 1;
-        top: 7.5rem;
-        @include setNavbarAnimat(0.3s);
         .nav-elem {
+            @include setNavbarAnimat(0.3s);
             background-color: $colorOfNav;
             box-shadow: $navBoxShadow;
             height: $navSize;
             width: 10vw;
-            @include setNavbarAnimat(0.3s);
         }
         .logo-container {
+            min-width: 22rem;
             position: relative;
             width: auto;
-            min-width: 22rem;
             @include setNavbarAnimat(0.5s);
             a {
                 display: block;
@@ -275,7 +274,6 @@ header {
                 width: 100%;
                 height: auto;
                 visibility: hidden;
-                //display: none;
                 top: -100px;
             }
             .hidden {
@@ -461,10 +459,10 @@ header {
                     transition-duration: 0.5s;
                 }
                 [class*="code"] {
-                    left: 30%;
+                    left: 30vw;
                 }
                 [class*="sear"] {
-                    right: 30%;
+                    right: 30vw;
                 }
             }
         }
@@ -518,7 +516,7 @@ header {
                     }
                     .project-min {
                         position: absolute;
-                        right: -65rem;
+                        right: -65vw;
                         top: calc(50% - 9rem);
                         .photo-cell {
                             background-color: $projectsMainColor;
@@ -526,7 +524,7 @@ header {
                             height: 18rem;
                             padding: 1rem;
                             transition-duration: 0.5s;
-                            width: 60rem;
+                            width: 60vw;
                             [class*="rea-"] {
                                 background-position: center;
                                 background-size: cover;
@@ -562,10 +560,10 @@ header {
                                 transition-duration: 0.5s;
                             }
                             [class*="code"] {
-                                left: 22rem;
+                                left: 20vw;
                             }
                             [class*="sear"] {
-                                right: 22rem;
+                                right: 20vw; 
                             }
                         }
                     }
@@ -587,8 +585,7 @@ header {
                     }
                     .right-arrow {
                         font-size: 1.5rem;
-                        left: -1rem;
-                        margin-right: 10px;
+                        left: -1.5rem;
                         position: absolute;
                     }
                     .tech-used {
@@ -613,7 +610,6 @@ header {
     4rem,
     0);
     background-color: $footerBackgroundColor;
-    height: 70vh;
     .title-footer {
         @include titleOfSection(-2rem);
     }
@@ -713,6 +709,16 @@ header {
     }
 }
 
+.copyrights {
+    display: flex;
+    width: 100%;
+    height: 7vh;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorOfNav;
+    color: #ffffff;
+}
+
 /* ---------------- Media Queries ----------------- */
 @media (max-width: 319.99px) {
     #btnCircleUp-js {
@@ -799,6 +805,12 @@ header {
                 .resp-photo-cell {
                     height: 6rem;
                     padding: 0.5rem;
+                    [class*="code"] {
+                        left: 15vw;
+                    }
+                    [class*="sear"] {
+                        right: 15vw;
+                    }
                 }
             }
         }
@@ -809,6 +821,23 @@ header {
             @include titleOfSection(-1.2rem);
             padding: 1rem 20px;
             font-size: 1.5rem;
+        }
+        .flex-area {
+            flex-wrap: wrap;
+            .footer-form {
+                width: 100%;
+                form {
+                    .form-btn {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            .data-container {
+                margin-top: 2rem;
+            }
+            .my-name {
+                text-align: center;
+            }
         }
     }
 }
@@ -853,7 +882,6 @@ header {
         }
         [class*="ech-"] {
             width: 20%;
-            margin-right: 1rem;
         }
     }
 
@@ -876,12 +904,45 @@ header {
         .project-container {
             display: none;
         }
+        
         .resp-project-container {
             display: block;
             .resp-project-min {
                 .resp-photo-cell {
                     padding: 0.5rem;
+                    height: 7rem;
+                    [class*="code"] {
+                        left: 23vw;
+                    }
+                    [class*="sear"] {
+                        right: 23vw;
+                    }
                 }
+            }
+        }
+    }
+    #footer {
+        @include sections(4rem, 0, 2rem, 0);
+        .title-footer {
+            @include titleOfSection(-1.2rem);
+            padding: 1rem 20px;
+            font-size: 1.5rem;
+        }
+        .flex-area {
+            flex-wrap: wrap;
+            .footer-form {
+                width: 100%;
+                form {
+                    .form-btn {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            .data-container {
+                margin-top: 2rem;
+            }
+            .my-name {
+                text-align: center;
             }
         }
     }
@@ -910,7 +971,55 @@ header {
             padding: 1.5rem 30px;
         }
     }
+
+    .sect-technologies {
+        .title-technologies {
+            @include titleOfSection(-3.5rem);
+            padding: 1.5rem 30px;
+        }
+        .technologies-background-area {
+            padding: 2rem;
+        }
+        .line {
+            margin: 1.3rem 0 1rem 0;
+        }
+        .media-padding {
+            padding: 0;
+        }
+        [class*="ech-"] {
+            width: 20%;
+        }
+    }
     
+    .sect-projects {
+        @include sections(4rem,
+        0,
+        8rem,
+        0);
+        .title-projects {
+            @include titleOfSection(-3.5rem);
+            padding: 1.5rem 30px;
+        }
+        .header-of-projects {
+            @include headerOfSection();
+            margin-bottom: 3rem;
+        }
+        .header-used-technologies {
+            margin: 0 0 0.5rem 0;
+        }
+        .project-container {
+            display: none;
+        }
+        
+        .resp-project-container {
+            display: block;
+            .resp-project-min {
+                .resp-photo-cell {
+                    padding: 0.5rem;
+                }
+            }
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -936,11 +1045,173 @@ header {
             padding: 1.5rem 30px;
         }
     }
+
+    .sect-projects {
+        @include sections(4rem,
+        0,
+        8rem,
+        0);
+        .title-projects {
+            @include titleOfSection(-3.5rem);
+            padding: 1.5rem 30px;
+        }
+        .header-of-projects {
+            @include headerOfSection();
+            margin-bottom: 3rem;
+        }
+        .header-used-technologies {
+            margin: 0 0 0.5rem 0;
+        }
+        .project-container {
+            display: none;
+        }
+        
+        .resp-project-container {
+            display: block;
+            .resp-project-min {
+                .resp-photo-cell {
+                    padding: 0.5rem; 
+                }
+            }
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
+    .sect-projects {
+        @include sections(4rem, 
+        0,
+        8rem,
+        0);
+        .title-projects {
+            @include titleOfSection(-4.5rem);
+        }
+        .header-of-projects {
+            @include headerOfSection();
+            margin-bottom: 3rem;
+        }
+        .header-used-technologies {
+            margin: 0 0 0.5rem 0;
+        }
+           
+        .project-container {
+            display: flex;
+            margin: 0 auto 0 0;
+            background-image: url("../images/office.jpeg");
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            .left-side {
+                background-color: $projectsMainColor;
+                box-shadow: 0px 0px 10px 0px $projectsMainColor;
+                color: $projectsLeftSideFontColor;
+                display: flex;
+                padding: 5rem 0 5rem 2rem;
+                width: 35%;
+                .list-left-side {
+                    display: flex;
+                    flex-direction: column;
+                    .cell {
+                        margin-bottom: 5rem;
+                        padding: 1.3rem; 
+                        position: relative;
+                        transition-duration: .5s;
+                        .cell-paragraph {
+                            min-height: 60px;
+                        }
+                        .cell-icon {
+                            margin-right: 0.3em;
+                        }
+                        .project-min {
+                            position: absolute;
+                            right: -63vw;
+                            top: calc(50% - 8rem);
+                            .photo-cell {
+                                background-color: $projectsMainColor;
+                                box-shadow: 0px 0px 10px 0px $projectsMainColor;
+                                height: 16rem;
+                                padding: 1rem;
+                                transition-duration: 0.5s;
+                                width: 58vw;
+                                [class*="rea-"] {
+                                    background-position: center;
+                                    background-size: cover;
+                                    height: 100%;
+                                    position: relative;
+                                    width: 100%;
+                                }
+                                .area-photo-1 {
+                                    background-image: url("../images/design_lab.jpg");
+                                }
+                                .area-photo-2 {
+                                    background-image: url("../images/picture_perfect.jpg");
+                                }
+                                .area-photo-3 {
+                                    background-image: url("../images/your_life.jpg");
+                                }
+                                .photo-layer {
+                                    background-color: $projectsPhotoLayerColor;
+                                    bottom: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    transition-duration: 0.5s;
+                                }
+                                .layer-icon {
+                                    color: $projectsLayerIconColor;
+                                    font-size: 4rem;
+                                    opacity: 0;
+                                    position: absolute;
+                                    top: calc(50% - 2rem);
+                                    transition-duration: 0.5s;
+                                }
+                                [class*="code"] {
+                                    left: 17vw;
+                                }
+                                [class*="sear"] {
+                                    right: 17vw; 
+                                }
+                            }
+                        }
+                        .arrow {
+                            background-color: $projectsMainColor;
+                            box-shadow: 0px 0px 10px 0px $projectsMainColor;
+                            height: 2rem;
+                            position: absolute;
+                            right: 0;
+                            top: calc(50% - 1rem);
+                            transform: matrix(0.71, 0.71, -0.71, 0.71, 16, 0);
+                            transition-duration: .5s;
+                            width: 2rem;
+                        }
+                        .header-of-cell-title {
+                            border: 0;
+                            margin: 0;
+                            position: relative;
+                        }
+                        .right-arrow {
+                            font-size: 1.5rem;
+                            left: -1rem;
+                            position: absolute;
+                        }
+                        .tech-used {
+                            display: flex;
+                            .cell-icon {
+                                width: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-side {
+                background-color: rgba(255, 255, 255, 0.521);
+                width: 100%;
+            }
+        }
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)
