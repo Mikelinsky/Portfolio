@@ -80,7 +80,7 @@ header {
     header .responsive-navbar .responsive-logo-container {
       width: 40%; }
       header .responsive-navbar .responsive-logo-container .responsive-navbar-logo {
-        width: 100%;
+        width: 65%;
         height: auto;
         cursor: pointer; }
   header .navbar-container {
@@ -301,7 +301,7 @@ header {
   .sect-projects .project-container {
     display: flex;
     margin: 0 auto 0 0;
-    background-image: url("../images/office.jpeg");
+    background-image: url("../images/dev_office1.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed; }
@@ -748,7 +748,13 @@ header {
   .sect-technologies .technologies-background-area {
     padding: 2rem; }
   .sect-technologies .line {
-    margin: 1.3rem 0 1rem 0; }
+    margin: 1.3rem 0 1rem 0;
+    height: 0.4rem; }
+    .sect-technologies .line .square-arrow {
+      width: 0.9rem;
+      height: 0.9rem; }
+    .sect-technologies .line::before {
+      height: 0.4rem; }
   .sect-technologies .media-padding {
     padding: 0; }
   .sect-technologies [class*="ech-"] {

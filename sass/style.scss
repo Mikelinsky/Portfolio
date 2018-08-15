@@ -225,7 +225,7 @@ header {
         .responsive-logo-container {
             width: 40%;
             .responsive-navbar-logo {
-                width: 100%;
+                width: 65%;
                 height: auto;
                 cursor: pointer;
             }
@@ -469,7 +469,7 @@ header {
     .project-container {
         display: flex;
         margin: 0 auto 0 0;
-        background-image: url("../images/office.jpeg");
+        background-image: url("../images/dev_office1.jpg");
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -993,6 +993,14 @@ header {
         }
         .line {
             margin: 1.3rem 0 1rem 0;
+            height: 0.4rem;
+            .square-arrow {
+                width: 0.9rem;
+                height: 0.9rem;
+            }
+            &::before {
+                height: 0.4rem;
+            }
         }
         .media-padding {
             padding: 0;
