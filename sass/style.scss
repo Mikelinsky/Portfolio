@@ -177,14 +177,13 @@ header {
     position: relative;
     //responsive navbar
     .responsive-navbar {
-        //background-color: $colorOfRespNav;
+        @include setNavbarAnimat();
         display: none;
         flex-wrap: wrap;
         padding: 1rem;
         position: fixed;
         width: 100%;
         z-index: 4;
-        @include setNavbarAnimat();
         .hamburger-container {  
             display: flex;
             flex-direction: row-reverse;
@@ -304,7 +303,7 @@ header {
                 padding: 0;
                 .hamburger-li {
                     line-height: $navSize;
-                    margin-right: 60px;
+                    margin-right: 8%;
                     a {
                         color: $colorFontNav;
                         font-size: $navFontSize;
@@ -399,7 +398,7 @@ header {
     .resp-project-container {
         padding-top: 3rem;
         padding-bottom: 3rem;
-        background-image: url("../images/office.jpeg");
+        background-image: url("../images/dev_office1.jpg");
         position: relative;
         display: none;
         background-position: center;
@@ -486,7 +485,7 @@ header {
                 flex-direction: column;
                 .cell {
                     margin-bottom: 5rem;
-                    padding: 2rem;
+                    padding: 2rem 1.5rem 2rem 2rem;
                     position: relative;
                     transition-duration: .5s;
                     .cell-paragraph {
@@ -516,7 +515,7 @@ header {
                     }
                     .project-min {
                         position: absolute;
-                        right: -65vw;
+                        right: -63vw;
                         top: calc(50% - 9rem);
                         .photo-cell {
                             background-color: $projectsMainColor;
@@ -524,7 +523,7 @@ header {
                             height: 18rem;
                             padding: 1rem;
                             transition-duration: 0.5s;
-                            width: 60vw;
+                            width: 58vw;
                             [class*="rea-"] {
                                 background-position: center;
                                 background-size: cover;
@@ -801,6 +800,8 @@ header {
         }
         .resp-project-container {
             display: block;
+            padding-top: 1.7rem;
+            padding-bottom: 1.7rem;
             .resp-project-min {
                 .resp-photo-cell {
                     height: 6rem;
@@ -815,6 +816,7 @@ header {
             }
         }
     }
+
     #footer {
         @include sections(4rem, 0, 2rem, 0);
         .title-footer {
@@ -876,6 +878,14 @@ header {
         }
         .line {
             margin: 1.3rem 0 1rem 0;
+            height: 0.4rem;
+            .square-arrow {
+                width: 0.9rem;
+                height: 0.9rem;
+            }
+            &::before {
+                height: 0.4rem;
+            }
         }
         .media-padding {
             padding: 0;
@@ -921,6 +931,7 @@ header {
             }
         }
     }
+
     #footer {
         @include sections(4rem, 0, 2rem, 0);
         .title-footer {
@@ -1096,27 +1107,13 @@ header {
         }
            
         .project-container {
-            display: flex;
-            margin: 0 auto 0 0;
-            background-image: url("../images/office.jpeg");
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
             .left-side {
-                background-color: $projectsMainColor;
-                box-shadow: 0px 0px 10px 0px $projectsMainColor;
-                color: $projectsLeftSideFontColor;
-                display: flex;
                 padding: 5rem 0 5rem 2rem;
-                width: 35%;
                 .list-left-side {
                     display: flex;
                     flex-direction: column;
                     .cell {
-                        margin-bottom: 5rem;
                         padding: 1.3rem; 
-                        position: relative;
-                        transition-duration: .5s;
                         .cell-paragraph {
                             min-height: 60px;
                         }
@@ -1124,50 +1121,11 @@ header {
                             margin-right: 0.3em;
                         }
                         .project-min {
-                            position: absolute;
                             right: -63vw;
                             top: calc(50% - 8rem);
                             .photo-cell {
-                                background-color: $projectsMainColor;
-                                box-shadow: 0px 0px 10px 0px $projectsMainColor;
                                 height: 16rem;
-                                padding: 1rem;
-                                transition-duration: 0.5s;
                                 width: 58vw;
-                                [class*="rea-"] {
-                                    background-position: center;
-                                    background-size: cover;
-                                    height: 100%;
-                                    position: relative;
-                                    width: 100%;
-                                }
-                                .area-photo-1 {
-                                    background-image: url("../images/design_lab.jpg");
-                                }
-                                .area-photo-2 {
-                                    background-image: url("../images/picture_perfect.jpg");
-                                }
-                                .area-photo-3 {
-                                    background-image: url("../images/your_life.jpg");
-                                }
-                                .photo-layer {
-                                    background-color: $projectsPhotoLayerColor;
-                                    bottom: 0;
-                                    left: 0;
-                                    opacity: 0;
-                                    position: absolute;
-                                    right: 0;
-                                    top: 0;
-                                    transition-duration: 0.5s;
-                                }
-                                .layer-icon {
-                                    color: $projectsLayerIconColor;
-                                    font-size: 4rem;
-                                    opacity: 0;
-                                    position: absolute;
-                                    top: calc(50% - 2rem);
-                                    transition-duration: 0.5s;
-                                }
                                 [class*="code"] {
                                     left: 17vw;
                                 }
@@ -1176,39 +1134,11 @@ header {
                                 }
                             }
                         }
-                        .arrow {
-                            background-color: $projectsMainColor;
-                            box-shadow: 0px 0px 10px 0px $projectsMainColor;
-                            height: 2rem;
-                            position: absolute;
-                            right: 0;
-                            top: calc(50% - 1rem);
-                            transform: matrix(0.71, 0.71, -0.71, 0.71, 16, 0);
-                            transition-duration: .5s;
-                            width: 2rem;
-                        }
-                        .header-of-cell-title {
-                            border: 0;
-                            margin: 0;
-                            position: relative;
-                        }
                         .right-arrow {
-                            font-size: 1.5rem;
                             left: -1rem;
-                            position: absolute;
-                        }
-                        .tech-used {
-                            display: flex;
-                            .cell-icon {
-                                width: 2.5rem;
-                            }
                         }
                     }
                 }
-            }
-            .right-side {
-                background-color: rgba(255, 255, 255, 0.521);
-                width: 100%;
             }
         }
     }
