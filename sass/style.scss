@@ -323,6 +323,16 @@ header {
     .title-about-me {
         @include titleOfSection(-4.5rem);
     }
+    .paragraph {
+        overflow: auto;
+        line-height: 2;
+        .photo-of-author {
+            float: left;
+            margin-right: 1rem;
+            max-width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .sect-technologies {
@@ -584,7 +594,7 @@ header {
                     }
                     .right-arrow {
                         font-size: 1.5rem;
-                        left: -1.5rem;
+                        left: -1.3rem;
                         position: absolute;
                     }
                     .tech-used {

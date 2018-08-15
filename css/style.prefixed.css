@@ -181,6 +181,14 @@ header {
     padding: 2rem 30px;
     position: absolute;
     top: -4.5rem; }
+  .sect-about-me .paragraph {
+    overflow: auto;
+    line-height: 2; }
+    .sect-about-me .paragraph .photo-of-author {
+      float: left;
+      margin-right: 1rem;
+      max-width: 100%;
+      height: auto; }
 
 .sect-technologies {
   padding: 4rem 0 8rem 0;
@@ -417,7 +425,7 @@ header {
             position: relative; }
           .sect-projects .project-container .left-side .list-left-side .cell .right-arrow {
             font-size: 1.5rem;
-            left: -1.5rem;
+            left: -1.3rem;
             position: absolute; }
           .sect-projects .project-container .left-side .list-left-side .cell .tech-used {
             display: -ms-flexbox;
