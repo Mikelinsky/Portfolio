@@ -301,7 +301,7 @@ header {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                .hamburger-li {
+                .navbar-li {
                     line-height: $navSize;
                     margin-right: 8%;
                     a {
@@ -328,7 +328,7 @@ header {
         line-height: 2;
         .photo-of-author {
             float: left;
-            margin-right: 1rem;
+            margin-right: 1.4rem;
             max-width: 100%;
             height: auto;
         }
@@ -730,6 +730,10 @@ header {
 
 /* ---------------- Media Queries ----------------- */
 @media (max-width: 319.99px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+    
     #btnCircleUp-js {
         i {
             font-size: 2rem;
@@ -752,13 +756,16 @@ header {
 
     .sect-about-me {
         @include sections(2rem, 0, 4rem, 0);
-        .paragraph {
-            text-align: center;
-        }
         .title-about-me {
             @include titleOfSection(-2.5rem);
             padding: 1rem 20px;
             font-size: 1.5rem;
+        }
+        .paragraph {
+            .photo-of-author {
+                margin-right: 0;
+                margin-bottom: 1.4rem;
+            }
         }
     }
 
@@ -856,6 +863,10 @@ header {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (min-width: 320px) and (max-width: 575.98px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+    
     #btnCircleUp-js {
         i {
             font-size: 3rem;
@@ -875,6 +886,11 @@ header {
         .title-about-me {
             @include titleOfSection(-3.5rem);
             padding: 1.5rem 30px;
+        }
+        .paragraph {
+            .photo-of-author {
+                margin-bottom: 1.4rem;
+            }
         }
     }
 
@@ -991,6 +1007,11 @@ header {
             @include titleOfSection(-3.5rem);
             padding: 1.5rem 30px;
         }
+        .paragraph {
+            .photo-of-author {
+                margin-bottom: 1.4rem;
+            }
+        }
     }
 
     .sect-technologies {
@@ -1072,6 +1093,11 @@ header {
         .title-about-me {
             @include titleOfSection(-3.5rem);
             padding: 1.5rem 30px;
+        }
+        .paragraph {
+            .photo-of-author {
+                margin-bottom: 1.4rem;
+            }
         }
     }
 
