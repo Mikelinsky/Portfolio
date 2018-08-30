@@ -453,10 +453,15 @@ header {
           font-size: 2em;
           font-weight: 700;
           color: white; }
-        #footer .flex-area .data-container .contact-data .telephone-number {
-          font-size: 1.3em;
-          margin-bottom: 0.6rem;
-          color: white; }
+        #footer .flex-area .data-container .contact-data .telephone-number-link {
+          text-decoration: none; }
+          #footer .flex-area .data-container .contact-data .telephone-number-link .telephone-number {
+            font-size: 1.3em;
+            margin-bottom: 0.6rem;
+            color: white;
+            transition-duration: .5s; }
+            #footer .flex-area .data-container .contact-data .telephone-number-link .telephone-number:hover {
+              color: #101f55; }
         #footer .flex-area .data-container .contact-data .icon-container .icon-link {
           margin: 0 1rem; }
           #footer .flex-area .data-container .contact-data .icon-container .icon-link .contact-icon {
@@ -543,7 +548,7 @@ header {
       font-size: 1.5rem; }
     .sect-about-me .paragraph .photo-of-author {
       margin-right: 0;
-      margin-bottom: 1.4rem; }
+      margin-bottom: 1rem; }
 
   .sect-technologies {
     padding: 2rem 0 4rem 0;
@@ -653,7 +658,7 @@ header {
     top: -3.5rem;
     padding: 1.5rem 30px; }
   .sect-about-me .paragraph .photo-of-author {
-    margin-bottom: 1.4rem; }
+    margin-bottom: 1rem; }
 
   .sect-technologies .title-technologies {
     background-color: #101f55;
@@ -752,8 +757,6 @@ header {
     position: absolute;
     top: -3.5rem;
     padding: 1.5rem 30px; }
-  .sect-about-me .paragraph .photo-of-author {
-    margin-bottom: 1.4rem; }
 
   .sect-technologies .title-technologies {
     background-color: #101f55;
@@ -823,8 +826,6 @@ header {
     position: absolute;
     top: -3.5rem;
     padding: 1.5rem 30px; }
-  .sect-about-me .paragraph .photo-of-author {
-    margin-bottom: 1.4rem; }
 
   .sect-projects {
     padding: 4rem 0 8rem 0;

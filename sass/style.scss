@@ -650,10 +650,17 @@ header {
                     font-weight: 700;
                     color: $footerDataColor;
                 }
-                .telephone-number {
-                    font-size: 1.3em;
-                    margin-bottom: 0.6rem;
-                    color: $footerDataColor;
+                .telephone-number-link {
+                    text-decoration: none; 
+                    .telephone-number {
+                        font-size: 1.3em;
+                        margin-bottom: 0.6rem;
+                        color: $footerDataColor;
+                        transition-duration: .5s;
+                        &:hover {
+                            color: $footerIconHoverColor;
+                        }
+                    }
                 }
                 .icon-container {
                     .icon-link {
@@ -764,7 +771,7 @@ header {
         .paragraph {
             .photo-of-author {
                 margin-right: 0;
-                margin-bottom: 1.4rem;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -889,7 +896,7 @@ header {
         }
         .paragraph {
             .photo-of-author {
-                margin-bottom: 1.4rem;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -1007,11 +1014,6 @@ header {
             @include titleOfSection(-3.5rem);
             padding: 1.5rem 30px;
         }
-        .paragraph {
-            .photo-of-author {
-                margin-bottom: 1.4rem;
-            }
-        }
     }
 
     .sect-technologies {
@@ -1093,11 +1095,6 @@ header {
         .title-about-me {
             @include titleOfSection(-3.5rem);
             padding: 1.5rem 30px;
-        }
-        .paragraph {
-            .photo-of-author {
-                margin-bottom: 1.4rem;
-            }
         }
     }
 

@@ -68,7 +68,10 @@ window.onload = function() {
 	});
 	jQuery(function selectAndClose() {
 		$('.hamburger-menu-link').click(function() {
-			
-		})
+			$('.hamburger-menu').hide(700);
+			$('.hamburger').show();
+			$('.hamburger-close').hide();
+			$('.responsive-navbar').removeAttr('style');
+		});
 	});
 };
