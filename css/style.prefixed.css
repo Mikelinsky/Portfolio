@@ -302,6 +302,9 @@ header {
         background-image: url("../images/picture_perfect.jpg"); }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .area-photo-3 {
         background-image: url("../images/your_life.jpg"); }
+      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .area-photo-4 {
+        background-image: url("../images/bootstrap_project.jpg");
+        background-position: top; }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .resp-photo-layer {
         background-color: rgba(32, 51, 114, 0.692);
         bottom: 0;
@@ -389,6 +392,9 @@ header {
                 background-image: url("../images/picture_perfect.jpg"); }
               .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-3 {
                 background-image: url("../images/your_life.jpg"); }
+              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-4 {
+                background-image: url("../images/bootstrap_project.jpg");
+                background-position: top; }
               .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .photo-layer {
                 background-color: rgba(32, 51, 114, 0.692);
                 bottom: 0;

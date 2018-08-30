@@ -1,10 +1,10 @@
-window.onload = function() {
+window.onload = function () {
 	//scroll function
 	jQuery(function watchScroll() {
-		$(window).scroll(function() {
+		$(window).scroll(function () {
 			var positionOfScroll = $(window).scrollTop();
 			console.log(positionOfScroll);
-			
+
 			if (positionOfScroll >= 450) {
 				console.log('change navbar');
 				//change resp navbar
@@ -34,7 +34,7 @@ window.onload = function() {
 					$('.logo-container').removeAttr('style');
 					$('nav').removeAttr('style');
 					$('.nav-elem').removeAttr('style');
-					$('.navbar-li').removeAttr('style'); 
+					$('.navbar-li').removeAttr('style');
 				};
 				reverseChangeNavbar();
 				//reverse change btn up
@@ -44,22 +44,24 @@ window.onload = function() {
 	});
 	// button UP
 	jQuery(function scrollUp() {
-		$('#btnCircleUp-js').on( "click", function(event) {
+		$('#btnCircleUp-js').on("click", function (event) {
 			event.preventDefault();
-			$('html, body').animate({scrollTop: 0}, 800);
-		  });
+			$('html, body').animate({
+				scrollTop: 0
+			}, 800);
+		});
 	});
 	//hamburger menu
 	jQuery(function showMenu() {
 		/* open menu */
-		$('.hamburger').click(function() {
+		$('.hamburger').click(function () {
 			$('.hamburger-menu').show(700);
 			$('.hamburger').hide();
 			$('.hamburger-close').show();
 			$('.responsive-navbar').css('background-color', 'rgba(16, 31, 85, 0.49)');
 		});
 		/* close menu */
-		$('.hamburger-close').click(function() {
+		$('.hamburger-close').click(function () {
 			$('.hamburger-menu').hide(700);
 			$('.hamburger').show();
 			$('.hamburger-close').hide();
@@ -67,7 +69,7 @@ window.onload = function() {
 		});
 	});
 	jQuery(function selectAndClose() {
-		$('.hamburger-menu-link').click(function() {
+		$('.hamburger-menu-link').click(function () {
 			$('.hamburger-menu').hide(700);
 			$('.hamburger').show();
 			$('.hamburger-close').hide();
@@ -75,3 +77,13 @@ window.onload = function() {
 		});
 	});
 };
+
+document.querySelectorAll('a[href^="#"]').forEach(function anchor(anchor) {
+	anchor.addEventListener('click', function(e) {
+		e.preventDefault();
+
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth'
+		});
+	});
+});

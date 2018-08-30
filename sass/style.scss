@@ -449,6 +449,10 @@ header {
                 .area-photo-3 {
                     background-image: url("../images/your_life.jpg");
                 }
+                .area-photo-4 {
+                    background-image: url("../images/bootstrap_project.jpg");
+                    background-position: top;
+                }
                 .resp-photo-layer {
                     background-color: $projectsPhotoLayerColor;
                     bottom: 0;
@@ -549,6 +553,10 @@ header {
                             }
                             .area-photo-3 {
                                 background-image: url("../images/your_life.jpg");
+                            }
+                            .area-photo-4 {
+                                background-image: url("../images/bootstrap_project.jpg");
+                                background-position: top;
                             }
                             .photo-layer {
                                 background-color: $projectsPhotoLayerColor;
