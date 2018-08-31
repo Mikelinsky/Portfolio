@@ -1,14 +1,18 @@
 window.onload = function () {
+
 	//scroll function
 	jQuery(function watchScroll() {
 		$(window).scroll(function () {
-			var positionOfScroll = $(window).scrollTop();
+			const positionOfScroll = $(window).scrollTop();
 			console.log(positionOfScroll);
 
 			if (positionOfScroll >= 450) {
 				console.log('change navbar');
 				//change resp navbar
-				$('.responsive-navbar').css('background-color', 'rgba(16, 31, 85, 0.49)');
+				function changeRespNavbar() {
+					$('.responsive-navbar').css('background-color', 'rgba(16, 31, 85, 0.49)');
+				};
+				changeRespNavbar();
 				//change navbar
 				function changeNavbar() {
 					$('.navbar-container').css('top', '5.5rem');
@@ -25,7 +29,10 @@ window.onload = function () {
 			} else {
 				console.log('reverse change');
 				//reverse change resp navbar
-				$('.responsive-navbar').removeAttr('style');
+				function reverseChangeRespNavbar() {
+					$('.responsive-navbar').removeAttr('style');
+				}
+				reverseChangeRespNavbar();
 				//reverse change navbar 
 				function reverseChangeNavbar() {
 					$('.navbar-container').removeAttr('style');
@@ -42,6 +49,7 @@ window.onload = function () {
 			}
 		});
 	});
+
 	// button UP
 	jQuery(function scrollUp() {
 		$('#btnCircleUp-js').on("click", function (event) {
@@ -51,6 +59,7 @@ window.onload = function () {
 			}, 800);
 		});
 	});
+
 	//hamburger menu
 	jQuery(function showMenu() {
 		/* open menu */
@@ -65,7 +74,7 @@ window.onload = function () {
 			$('.hamburger-menu').hide(700);
 			$('.hamburger').show();
 			$('.hamburger-close').hide();
-			$('.responsive-navbar').removeAttr('style');
+			//$('.responsive-navbar').removeAttr('style');
 		});
 	});
 	jQuery(function selectAndClose() {
@@ -73,17 +82,21 @@ window.onload = function () {
 			$('.hamburger-menu').hide(700);
 			$('.hamburger').show();
 			$('.hamburger-close').hide();
-			$('.responsive-navbar').removeAttr('style');
+			//$('.responsive-navbar').removeAttr('style');
 		});
 	});
+	// smooth scrool
+	function smoothScroll() {
+		document.querySelectorAll('a[href^="#"]').forEach(function anchor(anchor) {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+			});
+		});
+	};
+	smoothScroll();
 };
-
-document.querySelectorAll('a[href^="#"]').forEach(function anchor(anchor) {
-	anchor.addEventListener('click', function(e) {
-		e.preventDefault();
-
-		document.querySelector(this.getAttribute('href')).scrollIntoView({
-			behavior: 'smooth'
-		});
-	});
-});
