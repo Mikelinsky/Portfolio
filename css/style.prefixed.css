@@ -550,7 +550,9 @@ header {
         transition-duration: 0.5s;
         font-size: 0.9em; }
         #footer .flex-area .footer-form form .form-btn:hover {
-          background-position: 0 100%; }
+          background-position: 0 100%;
+          border-color: #101f55;
+          box-shadow: 0 0 0.2px #101f55; }
 
 .copyrights {
   display: -ms-flexbox;

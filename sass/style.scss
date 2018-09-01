@@ -119,6 +119,7 @@ $footerIconHoverColor: $colorOfNav;
 $footerBoxShadow: 0 0 0.2px rgb(255,
 255,
 255);
+$footerBoxShadowHover: 0 0 0.2px $footerBtnHoverColor;
 // mixins
 $titleFontColor: rgb(255,
 255,
@@ -725,7 +726,9 @@ header {
                     transition-duration: 0.5s;
                     font-size: 0.9em;
                     &:hover {
-                        background-position: 0 100%; //color: $footerBtnHoverFontColor;
+                        background-position: 0 100%; 
+                        border-color: $footerBtnHoverColor;
+                        box-shadow: $footerBoxShadowHover;
                     }
                 }
             }
