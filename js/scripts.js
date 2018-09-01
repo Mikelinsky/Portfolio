@@ -1,6 +1,5 @@
 window.onload = function () {
 
-
 	//scroll function
 	function changeElements() {
 		let positionOfScroll = window.pageYOffset;
@@ -24,7 +23,7 @@ window.onload = function () {
 				$('.navbar-li').css('line-height', '1rem');
 			};
 			changeNavbar();
-			//change btn up
+			//show btn up
 			$('#btnCircleUp-js').css('display', 'block');
 		} else {
 			console.log('reverse change');
@@ -44,7 +43,7 @@ window.onload = function () {
 				$('.navbar-li').removeAttr('style');
 			};
 			reverseChangeNavbar();
-			//reverse change btn up
+			//hide btn up
 			$('#btnCircleUp-js').removeAttr('style');
 		}
 	};

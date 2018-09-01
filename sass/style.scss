@@ -701,6 +701,15 @@ header {
                     padding: 0.5rem;
                     width: 100%;
                     color: $footerFontColor;
+                    transition-duration: 0.5s;
+                    &:focus {
+                        border: 3px solid $colorOfNav;
+                        box-shadow: $footerBoxShadowHover;
+                    }
+                    &:hover {
+                        border: 3px solid $colorOfNav;
+                        box-shadow: $footerBoxShadowHover;
+                    }
                 }
                 input::placeholder,
                 textarea::placeholder {
