@@ -1,5 +1,5 @@
 window.onload = function () {
-
+	let menuIsOpen = false;
 	//scroll function
 	function changeElements() {
 		let positionOfScroll = window.pageYOffset;
@@ -31,7 +31,9 @@ window.onload = function () {
 			function reverseChangeRespNavbar() {
 				$('.responsive-navbar').removeAttr('style');
 			}
-			reverseChangeRespNavbar();
+			if (menuIsOpen === false) {
+				reverseChangeRespNavbar();
+			} 
 			//reverse change navbar 
 			function reverseChangeNavbar() {
 				$('.navbar-container').removeAttr('style');
@@ -47,7 +49,8 @@ window.onload = function () {
 			$('#btnCircleUp-js').removeAttr('style');
 		}
 	};
-
+	changeElements();
+	
 	// scroll event
 	jQuery(function watchScroll() {
 		window.addEventListener('scroll', changeElements); 
@@ -77,6 +80,8 @@ window.onload = function () {
 	jQuery(function showMenu() {
 		/* open menu */
 		$('.hamburger').click(function () {
+			menuIsOpen = true;
+			console.log(menuIsOpen);
 			$('.hamburger-menu').show(700);
 			$('.hamburger').hide();
 			$('.hamburger-close').show();
@@ -85,6 +90,8 @@ window.onload = function () {
 		});
 		/* close menu */
 		$('.hamburger-close').click(function () {
+			menuIsOpen = false;
+			console.log(menuIsOpen);
 			$('.hamburger-menu').hide(700);
 			$('.hamburger').show();
 			$('.hamburger-close').hide();
@@ -98,6 +105,7 @@ window.onload = function () {
 		document.querySelectorAll('a[href^="#"]').forEach(function anchor(anchor) {
 			anchor.addEventListener('click', function (event) {
 				event.preventDefault();
+				menuIsOpen = false;
 
 				document.querySelector(this.getAttribute('href')).scrollIntoView({
 					behavior: 'smooth',
