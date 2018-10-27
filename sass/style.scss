@@ -454,6 +454,9 @@ header {
                     background-image: url("../images/bootstrap_project.jpg");
                     background-position: top;
                 }
+                .area-photo-5 { 
+                    background-image: url('../images/rock-paper-scissors.png');
+                } 
                 .resp-photo-layer {
                     background-color: $projectsPhotoLayerColor;
                     bottom: 0;
@@ -484,7 +487,7 @@ header {
     .project-container {
         display: flex;
         margin: 0 auto 0 0;
-        background-image: url("../images/dev_office1.jpg");
+        background-image: url("../images/dev_office1_opt.jpg");
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -511,7 +514,7 @@ header {
                     }
                     &:hover {
                         background-color: $projectsHoverColor;
-                        box-shadow: 0px 0px 10px 0px $projectsHoverColor;
+                        box-shadow: 0px 0px 10px 0px $projectsHoverColor; 
                         color: $projectsHoverFontColor;
                     }
                     &:hover .arrow {
@@ -559,6 +562,9 @@ header {
                                 background-image: url("../images/bootstrap_project.jpg");
                                 background-position: top;
                             }
+                            .area-photo-5 { 
+                                background-image: url('../images/rock-paper-scissors.png');
+                            } 
                             .photo-layer {
                                 background-color: $projectsPhotoLayerColor;
                                 bottom: 0;

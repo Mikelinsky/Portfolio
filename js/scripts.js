@@ -81,7 +81,6 @@ window.onload = function () {
 		/* open menu */
 		$('.hamburger').click(function () {
 			menuIsOpen = true;
-			console.log(menuIsOpen);
 			$('.hamburger-menu').show(700);
 			$('.hamburger').hide();
 			$('.hamburger-close').show();
@@ -91,7 +90,6 @@ window.onload = function () {
 		/* close menu */
 		$('.hamburger-close').click(function () {
 			menuIsOpen = false;
-			console.log(menuIsOpen);
 			$('.hamburger-menu').hide(700);
 			$('.hamburger').show();
 			$('.hamburger-close').hide();
