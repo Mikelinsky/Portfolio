@@ -322,7 +322,7 @@ header {
         @include headerOfSection();
     }
     .title-about-me {
-        @include titleOfSection(-4.5rem);
+        @include titleOfSection(-4.5rem); 
     }
     .paragraph {
         overflow: auto;
@@ -332,6 +332,7 @@ header {
             margin-right: 1.4rem;
             max-width: 100%;
             height: auto;
+            border: 4px solid $colorOfNav;
         }
     }
 }
@@ -409,7 +410,7 @@ header {
     .resp-project-container {
         padding-top: 3rem;
         padding-bottom: 3rem;
-        background-image: url("../images/dev_office1.jpg");
+        background-image: url("../images/dev_office1_opt.jpg"); 
         position: relative;
         display: none;
         background-position: center;
@@ -457,6 +458,10 @@ header {
                 .area-photo-5 { 
                     background-image: url('../images/rock-paper-scissors.jpg');
                 } 
+                .area-photo-6 {
+                    background-image: url('../images/dice_generator.jpg');
+                }
+                
                 .resp-photo-layer {
                     background-color: $projectsPhotoLayerColor;
                     bottom: 0;
@@ -564,6 +569,9 @@ header {
                             }
                             .area-photo-5 { 
                                 background-image: url('../images/rock-paper-scissors.jpg');
+                            } 
+                            .area-photo-6 { 
+                                background-image: url('../images/dice_generator.jpg'); 
                             } 
                             .photo-layer {
                                 background-color: $projectsPhotoLayerColor;

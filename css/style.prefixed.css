@@ -188,7 +188,8 @@ header {
       float: left;
       margin-right: 1.4rem;
       max-width: 100%;
-      height: auto; }
+      height: auto;
+      border: 4px solid #101f55; }
 
 .sect-technologies {
   padding: 4rem 0 8rem 0;
@@ -267,7 +268,7 @@ header {
   .sect-projects .resp-project-container {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-image: url("../images/dev_office1.jpg");
+    background-image: url("../images/dev_office1_opt.jpg");
     position: relative;
     display: none;
     background-position: center;
@@ -307,6 +308,8 @@ header {
         background-position: top; }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .area-photo-5 {
         background-image: url("../images/rock-paper-scissors.jpg"); }
+      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .area-photo-6 {
+        background-image: url("../images/dice_generator.jpg"); }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .resp-photo-layer {
         background-color: rgba(32, 51, 114, 0.692);
         bottom: 0;
@@ -399,6 +402,8 @@ header {
                 background-position: top; }
               .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-5 {
                 background-image: url("../images/rock-paper-scissors.jpg"); }
+              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-6 {
+                background-image: url("../images/dice_generator.jpg"); }
               .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .photo-layer {
                 background-color: rgba(32, 51, 114, 0.692);
                 bottom: 0;
