@@ -461,7 +461,9 @@ header {
                 .area-photo-6 {
                     background-image: url('../images/dice_generator.jpg');
                 }
-                
+                .area-photo-8 {
+                    background-image: url('../images/portfolio.jpg'); 
+                }
                 .resp-photo-layer {
                     background-color: $projectsPhotoLayerColor;
                     bottom: 0;
@@ -572,6 +574,10 @@ header {
                             } 
                             .area-photo-6 { 
                                 background-image: url('../images/dice_generator.jpg'); 
+                            } 
+                            .area-photo-8 {
+                                background-image: url('../images/portfolio.jpg'); 
+                                background-position: top;
                             } 
                             .photo-layer {
                                 background-color: $projectsPhotoLayerColor;
