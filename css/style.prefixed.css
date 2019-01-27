@@ -310,6 +310,9 @@ header {
         background-image: url("../images/rock-paper-scissors.jpg"); }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .area-photo-6 {
         background-image: url("../images/dice_generator.jpg"); }
+      .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .area-photo-7 {
+        background-image: url("../images/gibbetgame.jpeg");
+        background-position: top; }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .area-photo-8 {
         background-image: url("../images/portfolio.jpg"); }
       .sect-projects .resp-project-container .resp-project-min .resp-photo-cell .resp-photo-layer {
@@ -406,6 +409,9 @@ header {
                 background-image: url("../images/rock-paper-scissors.jpg"); }
               .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-6 {
                 background-image: url("../images/dice_generator.jpg"); }
+              .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-7 {
+                background-image: url("../images/gibbetgame.jpeg");
+                background-position: top; }
               .sect-projects .project-container .left-side .list-left-side .cell .project-min .photo-cell .area-photo-8 {
                 background-image: url("../images/portfolio.jpg");
                 background-position: top; }
